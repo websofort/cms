@@ -1,0 +1,953 @@
+[2024-12-18 11:28:58] production.ERROR: foreach() argument must be of type array|object, null given {"view":{"view":"C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\resources\\views\\admin\\setting\\social_credential.blade.php","data":{"general":"<pre class=sf-dump id=sf-dump-1023774727 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\GeneralSetting</span> {<a class=sf-dump-ref>#250</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"16 characters\">general_settings</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:31</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>site_name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">FinBiz</span>\"
+    \"<span class=sf-dump-key>cur_text</span>\" => \"<span class=sf-dump-str title=\"3 characters\">USD</span>\"
+    \"<span class=sf-dump-key>cur_sym</span>\" => \"<span class=sf-dump-str>$</span>\"
+    \"<span class=sf-dump-key>email_from</span>\" => \"<span class=sf-dump-str title=\"16 characters\">info@example.com</span>\"
+    \"<span class=sf-dump-key>email_template</span>\" => \"<span class=sf-dump-str title=\"62 characters\">&lt;p&gt;Hi {{fullname}} ({{username}}),&amp;nbsp;&lt;/p&gt;&lt;p&gt;{{message}}&lt;/p&gt;</span>\"
+    \"<span class=sf-dump-key>sms_body</span>\" => \"<span class=sf-dump-str title=\"43 characters\">hi {{fullname}} ({{username}}), {{message}}</span>\"
+    \"<span class=sf-dump-key>sms_from</span>\" => \"<span class=sf-dump-str title=\"6 characters\">FinBiz</span>\"
+    \"<span class=sf-dump-key>base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">673de6</span>\"
+    \"<span class=sf-dump-key>secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">673de6</span>\"
+    \"<span class=sf-dump-key>theme_two_base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">fab700</span>\"
+    \"<span class=sf-dump-key>theme_two_secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">fab700</span>\"
+    \"<span class=sf-dump-key>theme_three_base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">ca46f6</span>\"
+    \"<span class=sf-dump-key>theme_three_secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">6a54f8</span>\"
+    \"<span class=sf-dump-key>mail_config</span>\" => \"<span class=sf-dump-str title=\"123 characters\">{&quot;name&quot;:&quot;smtp&quot;,&quot;host&quot;:&quot;smtp.mailtrap.io&quot;,&quot;port&quot;:&quot;2525&quot;,&quot;enc&quot;:&quot;ssl&quot;,&quot;username&quot;:&quot;bcbcc6239f7a0e&quot;,&quot;password&quot;:&quot;c5d10803bef9b1&quot;}</span>\"
+    \"<span class=sf-dump-key>sms_config</span>\" => \"<span class=sf-dump-str title=\"772 characters\">{&quot;name&quot;:&quot;messageBird&quot;,&quot;clickatell&quot;:{&quot;api_key&quot;:&quot;----------------&quot;},&quot;infobip&quot;:{&quot;username&quot;:&quot;------------8888888&quot;,&quot;password&quot;:&quot;-----------------&quot;},&quot;message_bird&quot;:{&quot;api_key&quot;:&quot;-------------------&quot;},&quot;nexmo&quot;:{&quot;api_key&quot;:&quot;----------------------&quot;,&quot;api_secret&quot;:&quot;----------------------&quot;},&quot;sms_broadcast&quot;:{&quot;username&quot;:&quot;----------------------&quot;,&quot;password&quot;:&quot;-----------------------------&quot;},&quot;twilio&quot;:{&quot;account_sid&quot;:&quot;-----------------------&quot;,&quot;auth_token&quot;:&quot;---------------------------&quot;,&quot;from&quot;:&quot;----------------------&quot;},&quot;text_magic&quot;:{&quot;username&quot;:&quot;-----------------------&quot;,&quot;apiv2_key&quot;:&quot;-------------------------------&quot;},&quot;custom&quot;:{&quot;method&quot;:&quot;get&quot;,&quot;url&quot;:&quot;https:\\/\\/hostname\\/demo-api-v1&quot;,&quot;headers&quot;:{&quot;name&quot;:[&quot;api_key&quot;],&quot;value&quot;:[&quot;test_api 555&quot;]},&quot;body&quot;:{&quot;name&quot;:[&quot;from_number&quot;],&quot;value&quot;:[&quot;5657545757&quot;]}}}</span>\"
+    \"<span class=sf-dump-key>global_shortcodes</span>\" => \"\"\"
+      <span class=sf-dump-str title=\"128 characters\">{<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;site_name&quot;:&quot;Name of your site&quot;,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;site_currency&quot;:&quot;Currency of your site&quot;,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;currency_symbol&quot;:&quot;Symbol of currency&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">}</span>
+      \"\"\"
+    \"<span class=sf-dump-key>kv</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>ev</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>en</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>sv</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sn</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>force_ssl</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>maintenance_mode</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>secure_password</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>agree</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>registration</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>active_template</span>\" => \"<span class=sf-dump-str title=\"7 characters\">default</span>\"
+    \"<span class=sf-dump-key>system_info</span>\" => \"<span class=sf-dump-str title=\"2 characters\">[]</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2023-08-28 11:11:51</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:31</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>site_name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">FinBiz</span>\"
+    \"<span class=sf-dump-key>cur_text</span>\" => \"<span class=sf-dump-str title=\"3 characters\">USD</span>\"
+    \"<span class=sf-dump-key>cur_sym</span>\" => \"<span class=sf-dump-str>$</span>\"
+    \"<span class=sf-dump-key>email_from</span>\" => \"<span class=sf-dump-str title=\"16 characters\">info@example.com</span>\"
+    \"<span class=sf-dump-key>email_template</span>\" => \"<span class=sf-dump-str title=\"62 characters\">&lt;p&gt;Hi {{fullname}} ({{username}}),&amp;nbsp;&lt;/p&gt;&lt;p&gt;{{message}}&lt;/p&gt;</span>\"
+    \"<span class=sf-dump-key>sms_body</span>\" => \"<span class=sf-dump-str title=\"43 characters\">hi {{fullname}} ({{username}}), {{message}}</span>\"
+    \"<span class=sf-dump-key>sms_from</span>\" => \"<span class=sf-dump-str title=\"6 characters\">FinBiz</span>\"
+    \"<span class=sf-dump-key>base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">673de6</span>\"
+    \"<span class=sf-dump-key>secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">673de6</span>\"
+    \"<span class=sf-dump-key>theme_two_base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">fab700</span>\"
+    \"<span class=sf-dump-key>theme_two_secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">fab700</span>\"
+    \"<span class=sf-dump-key>theme_three_base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">ca46f6</span>\"
+    \"<span class=sf-dump-key>theme_three_secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">6a54f8</span>\"
+    \"<span class=sf-dump-key>mail_config</span>\" => \"<span class=sf-dump-str title=\"123 characters\">{&quot;name&quot;:&quot;smtp&quot;,&quot;host&quot;:&quot;smtp.mailtrap.io&quot;,&quot;port&quot;:&quot;2525&quot;,&quot;enc&quot;:&quot;ssl&quot;,&quot;username&quot;:&quot;bcbcc6239f7a0e&quot;,&quot;password&quot;:&quot;c5d10803bef9b1&quot;}</span>\"
+    \"<span class=sf-dump-key>sms_config</span>\" => \"<span class=sf-dump-str title=\"772 characters\">{&quot;name&quot;:&quot;messageBird&quot;,&quot;clickatell&quot;:{&quot;api_key&quot;:&quot;----------------&quot;},&quot;infobip&quot;:{&quot;username&quot;:&quot;------------8888888&quot;,&quot;password&quot;:&quot;-----------------&quot;},&quot;message_bird&quot;:{&quot;api_key&quot;:&quot;-------------------&quot;},&quot;nexmo&quot;:{&quot;api_key&quot;:&quot;----------------------&quot;,&quot;api_secret&quot;:&quot;----------------------&quot;},&quot;sms_broadcast&quot;:{&quot;username&quot;:&quot;----------------------&quot;,&quot;password&quot;:&quot;-----------------------------&quot;},&quot;twilio&quot;:{&quot;account_sid&quot;:&quot;-----------------------&quot;,&quot;auth_token&quot;:&quot;---------------------------&quot;,&quot;from&quot;:&quot;----------------------&quot;},&quot;text_magic&quot;:{&quot;username&quot;:&quot;-----------------------&quot;,&quot;apiv2_key&quot;:&quot;-------------------------------&quot;},&quot;custom&quot;:{&quot;method&quot;:&quot;get&quot;,&quot;url&quot;:&quot;https:\\/\\/hostname\\/demo-api-v1&quot;,&quot;headers&quot;:{&quot;name&quot;:[&quot;api_key&quot;],&quot;value&quot;:[&quot;test_api 555&quot;]},&quot;body&quot;:{&quot;name&quot;:[&quot;from_number&quot;],&quot;value&quot;:[&quot;5657545757&quot;]}}}</span>\"
+    \"<span class=sf-dump-key>global_shortcodes</span>\" => \"\"\"
+      <span class=sf-dump-str title=\"128 characters\">{<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;site_name&quot;:&quot;Name of your site&quot;,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;site_currency&quot;:&quot;Currency of your site&quot;,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;currency_symbol&quot;:&quot;Symbol of currency&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">}</span>
+      \"\"\"
+    \"<span class=sf-dump-key>kv</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>ev</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>en</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>sv</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sn</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>force_ssl</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>maintenance_mode</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>secure_password</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>agree</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>registration</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>active_template</span>\" => \"<span class=sf-dump-str title=\"7 characters\">default</span>\"
+    \"<span class=sf-dump-key>system_info</span>\" => \"<span class=sf-dump-str title=\"2 characters\">[]</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2023-08-28 11:11:51</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>mail_config</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>sms_config</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>global_shortcodes</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1023774727\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","activeTemplate":"<pre class=sf-dump id=sf-dump-1915878815 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"16 characters\">presets.default.</span>\"
+</pre><script>Sfdump(\"sf-dump-1915878815\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","activeTemplateTrue":"<pre class=sf-dump id=sf-dump-1200111660 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"23 characters\">assets/presets/default/</span>\"
+</pre><script>Sfdump(\"sf-dump-1200111660\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","language":"<pre class=sf-dump id=sf-dump-990916508 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Database\\Eloquent\\Collection</span> {<a class=sf-dump-ref>#604</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:2</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"App\\Models\\Language
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Language</span> {<a class=sf-dump-ref>#1228</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"9 characters\">languages</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+    <span class=sf-dump-index>1</span> => <span class=sf-dump-note title=\"App\\Models\\Language
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Language</span> {<a class=sf-dump-ref>#1229</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"9 characters\">languages</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+</samp>}
+</pre><script>Sfdump(\"sf-dump-990916508\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","emptyMessage":"<pre class=sf-dump id=sf-dump-446917137 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"7 characters\">No data</span>\"
+</pre><script>Sfdump(\"sf-dump-446917137\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","errors":"<pre class=sf-dump id=sf-dump-2023279697 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1660</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-2023279697\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","pageTitle":"<pre class=sf-dump id=sf-dump-409837489 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"24 characters\">Social Login Credentials</span>\"
+</pre><script>Sfdump(\"sf-dump-409837489\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): foreach() argument must be of type array|object, null given at C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\resources\\views\\admin\\setting\\social_credential.blade.php:20)
+[stacktrace]
+#0 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'foreach() argum...', 'C:\\\\Users\\\\Admin\\\\...', 20)
+#1 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\resources\\views\\admin\\setting\\social_credential.blade.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'foreach() argum...', 'C:\\\\Users\\\\Admin\\\\...', 20)
+#2 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Users\\\\Admin\\\\...')
+#3 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\Admin\\\\...', Array)
+#5 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\Admin\\\\...', Array)
+#6 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(207): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Admin\\\\...', Array)
+#7 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(190): Illuminate\\View\\View->getContents()
+#8 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(159): Illuminate\\View\\View->renderContents()
+#9 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#10 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#11 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(918): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#12 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(885): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#13 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\app\\Http\\Middleware\\RedirectIfNotAdmin.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\RedirectIfNotAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\app\\Http\\Middleware\\LanguageMiddleware.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\LanguageMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#27 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\beyondcode\\laravel-query-detector\\src\\QueryDetectorMiddleware.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): BeyondCode\\QueryDetector\\QueryDetectorMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#59 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#61 C:\\Program Files\\Herd\\resources\\app.asar.unpacked\\resources\\valet\\server.php(139): require('C:\\\\Users\\\\Admin\\\\...')
+#62 {main}
+
+[previous exception] [object] (ErrorException(code: 0): foreach() argument must be of type array|object, null given at C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\storage\\framework\\views\\92f6126278e48b8dababa0172f7decbc.php:20)
+[stacktrace]
+#0 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'foreach() argum...', 'C:\\\\Users\\\\Admin\\\\...', 20)
+#1 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\storage\\framework\\views\\92f6126278e48b8dababa0172f7decbc.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'foreach() argum...', 'C:\\\\Users\\\\Admin\\\\...', 20)
+#2 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Users\\\\Admin\\\\...')
+#3 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\Admin\\\\...', Array)
+#5 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\Admin\\\\...', Array)
+#6 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(207): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Admin\\\\...', Array)
+#7 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(190): Illuminate\\View\\View->getContents()
+#8 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(159): Illuminate\\View\\View->renderContents()
+#9 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#10 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#11 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(918): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#12 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(885): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#13 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\app\\Http\\Middleware\\RedirectIfNotAdmin.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\RedirectIfNotAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\app\\Http\\Middleware\\LanguageMiddleware.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\LanguageMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#27 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\beyondcode\\laravel-query-detector\\src\\QueryDetectorMiddleware.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): BeyondCode\\QueryDetector\\QueryDetectorMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#59 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#61 C:\\Program Files\\Herd\\resources\\app.asar.unpacked\\resources\\valet\\server.php(139): require('C:\\\\Users\\\\Admin\\\\...')
+#62 {main}
+"} 
+[2024-12-18 11:32:31] production.ERROR: htmlspecialchars(): Argument #1 ($string) must be of type string, array given {"view":{"view":"C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\resources\\views\\admin\\frontend\\builder\\index.blade.php","data":{"general":"<pre class=sf-dump id=sf-dump-723925141 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\GeneralSetting</span> {<a class=sf-dump-ref>#250</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"16 characters\">general_settings</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:31</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>site_name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">FinBiz</span>\"
+    \"<span class=sf-dump-key>cur_text</span>\" => \"<span class=sf-dump-str title=\"3 characters\">USD</span>\"
+    \"<span class=sf-dump-key>cur_sym</span>\" => \"<span class=sf-dump-str>$</span>\"
+    \"<span class=sf-dump-key>email_from</span>\" => \"<span class=sf-dump-str title=\"16 characters\">info@example.com</span>\"
+    \"<span class=sf-dump-key>email_template</span>\" => \"<span class=sf-dump-str title=\"62 characters\">&lt;p&gt;Hi {{fullname}} ({{username}}),&amp;nbsp;&lt;/p&gt;&lt;p&gt;{{message}}&lt;/p&gt;</span>\"
+    \"<span class=sf-dump-key>sms_body</span>\" => \"<span class=sf-dump-str title=\"43 characters\">hi {{fullname}} ({{username}}), {{message}}</span>\"
+    \"<span class=sf-dump-key>sms_from</span>\" => \"<span class=sf-dump-str title=\"6 characters\">FinBiz</span>\"
+    \"<span class=sf-dump-key>base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">673de6</span>\"
+    \"<span class=sf-dump-key>secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">673de6</span>\"
+    \"<span class=sf-dump-key>theme_two_base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">fab700</span>\"
+    \"<span class=sf-dump-key>theme_two_secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">fab700</span>\"
+    \"<span class=sf-dump-key>theme_three_base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">ca46f6</span>\"
+    \"<span class=sf-dump-key>theme_three_secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">6a54f8</span>\"
+    \"<span class=sf-dump-key>mail_config</span>\" => \"<span class=sf-dump-str title=\"123 characters\">{&quot;name&quot;:&quot;smtp&quot;,&quot;host&quot;:&quot;smtp.mailtrap.io&quot;,&quot;port&quot;:&quot;2525&quot;,&quot;enc&quot;:&quot;ssl&quot;,&quot;username&quot;:&quot;bcbcc6239f7a0e&quot;,&quot;password&quot;:&quot;c5d10803bef9b1&quot;}</span>\"
+    \"<span class=sf-dump-key>sms_config</span>\" => \"<span class=sf-dump-str title=\"772 characters\">{&quot;name&quot;:&quot;messageBird&quot;,&quot;clickatell&quot;:{&quot;api_key&quot;:&quot;----------------&quot;},&quot;infobip&quot;:{&quot;username&quot;:&quot;------------8888888&quot;,&quot;password&quot;:&quot;-----------------&quot;},&quot;message_bird&quot;:{&quot;api_key&quot;:&quot;-------------------&quot;},&quot;nexmo&quot;:{&quot;api_key&quot;:&quot;----------------------&quot;,&quot;api_secret&quot;:&quot;----------------------&quot;},&quot;sms_broadcast&quot;:{&quot;username&quot;:&quot;----------------------&quot;,&quot;password&quot;:&quot;-----------------------------&quot;},&quot;twilio&quot;:{&quot;account_sid&quot;:&quot;-----------------------&quot;,&quot;auth_token&quot;:&quot;---------------------------&quot;,&quot;from&quot;:&quot;----------------------&quot;},&quot;text_magic&quot;:{&quot;username&quot;:&quot;-----------------------&quot;,&quot;apiv2_key&quot;:&quot;-------------------------------&quot;},&quot;custom&quot;:{&quot;method&quot;:&quot;get&quot;,&quot;url&quot;:&quot;https:\\/\\/hostname\\/demo-api-v1&quot;,&quot;headers&quot;:{&quot;name&quot;:[&quot;api_key&quot;],&quot;value&quot;:[&quot;test_api 555&quot;]},&quot;body&quot;:{&quot;name&quot;:[&quot;from_number&quot;],&quot;value&quot;:[&quot;5657545757&quot;]}}}</span>\"
+    \"<span class=sf-dump-key>global_shortcodes</span>\" => \"\"\"
+      <span class=sf-dump-str title=\"128 characters\">{<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;site_name&quot;:&quot;Name of your site&quot;,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;site_currency&quot;:&quot;Currency of your site&quot;,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;currency_symbol&quot;:&quot;Symbol of currency&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">}</span>
+      \"\"\"
+    \"<span class=sf-dump-key>kv</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>ev</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>en</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>sv</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sn</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>force_ssl</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>maintenance_mode</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>secure_password</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>agree</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>registration</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>active_template</span>\" => \"<span class=sf-dump-str title=\"7 characters\">default</span>\"
+    \"<span class=sf-dump-key>system_info</span>\" => \"<span class=sf-dump-str title=\"2 characters\">[]</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2023-08-28 11:11:51</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:31</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>site_name</span>\" => \"<span class=sf-dump-str title=\"6 characters\">FinBiz</span>\"
+    \"<span class=sf-dump-key>cur_text</span>\" => \"<span class=sf-dump-str title=\"3 characters\">USD</span>\"
+    \"<span class=sf-dump-key>cur_sym</span>\" => \"<span class=sf-dump-str>$</span>\"
+    \"<span class=sf-dump-key>email_from</span>\" => \"<span class=sf-dump-str title=\"16 characters\">info@example.com</span>\"
+    \"<span class=sf-dump-key>email_template</span>\" => \"<span class=sf-dump-str title=\"62 characters\">&lt;p&gt;Hi {{fullname}} ({{username}}),&amp;nbsp;&lt;/p&gt;&lt;p&gt;{{message}}&lt;/p&gt;</span>\"
+    \"<span class=sf-dump-key>sms_body</span>\" => \"<span class=sf-dump-str title=\"43 characters\">hi {{fullname}} ({{username}}), {{message}}</span>\"
+    \"<span class=sf-dump-key>sms_from</span>\" => \"<span class=sf-dump-str title=\"6 characters\">FinBiz</span>\"
+    \"<span class=sf-dump-key>base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">673de6</span>\"
+    \"<span class=sf-dump-key>secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">673de6</span>\"
+    \"<span class=sf-dump-key>theme_two_base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">fab700</span>\"
+    \"<span class=sf-dump-key>theme_two_secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">fab700</span>\"
+    \"<span class=sf-dump-key>theme_three_base_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">ca46f6</span>\"
+    \"<span class=sf-dump-key>theme_three_secondary_color</span>\" => \"<span class=sf-dump-str title=\"6 characters\">6a54f8</span>\"
+    \"<span class=sf-dump-key>mail_config</span>\" => \"<span class=sf-dump-str title=\"123 characters\">{&quot;name&quot;:&quot;smtp&quot;,&quot;host&quot;:&quot;smtp.mailtrap.io&quot;,&quot;port&quot;:&quot;2525&quot;,&quot;enc&quot;:&quot;ssl&quot;,&quot;username&quot;:&quot;bcbcc6239f7a0e&quot;,&quot;password&quot;:&quot;c5d10803bef9b1&quot;}</span>\"
+    \"<span class=sf-dump-key>sms_config</span>\" => \"<span class=sf-dump-str title=\"772 characters\">{&quot;name&quot;:&quot;messageBird&quot;,&quot;clickatell&quot;:{&quot;api_key&quot;:&quot;----------------&quot;},&quot;infobip&quot;:{&quot;username&quot;:&quot;------------8888888&quot;,&quot;password&quot;:&quot;-----------------&quot;},&quot;message_bird&quot;:{&quot;api_key&quot;:&quot;-------------------&quot;},&quot;nexmo&quot;:{&quot;api_key&quot;:&quot;----------------------&quot;,&quot;api_secret&quot;:&quot;----------------------&quot;},&quot;sms_broadcast&quot;:{&quot;username&quot;:&quot;----------------------&quot;,&quot;password&quot;:&quot;-----------------------------&quot;},&quot;twilio&quot;:{&quot;account_sid&quot;:&quot;-----------------------&quot;,&quot;auth_token&quot;:&quot;---------------------------&quot;,&quot;from&quot;:&quot;----------------------&quot;},&quot;text_magic&quot;:{&quot;username&quot;:&quot;-----------------------&quot;,&quot;apiv2_key&quot;:&quot;-------------------------------&quot;},&quot;custom&quot;:{&quot;method&quot;:&quot;get&quot;,&quot;url&quot;:&quot;https:\\/\\/hostname\\/demo-api-v1&quot;,&quot;headers&quot;:{&quot;name&quot;:[&quot;api_key&quot;],&quot;value&quot;:[&quot;test_api 555&quot;]},&quot;body&quot;:{&quot;name&quot;:[&quot;from_number&quot;],&quot;value&quot;:[&quot;5657545757&quot;]}}}</span>\"
+    \"<span class=sf-dump-key>global_shortcodes</span>\" => \"\"\"
+      <span class=sf-dump-str title=\"128 characters\">{<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;site_name&quot;:&quot;Name of your site&quot;,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;site_currency&quot;:&quot;Currency of your site&quot;,<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">    &quot;currency_symbol&quot;:&quot;Symbol of currency&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"128 characters\">}</span>
+      \"\"\"
+    \"<span class=sf-dump-key>kv</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>ev</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>en</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>sv</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>sn</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>force_ssl</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>maintenance_mode</span>\" => <span class=sf-dump-num>0</span>
+    \"<span class=sf-dump-key>secure_password</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>agree</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>registration</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>active_template</span>\" => \"<span class=sf-dump-str title=\"7 characters\">default</span>\"
+    \"<span class=sf-dump-key>system_info</span>\" => \"<span class=sf-dump-str title=\"2 characters\">[]</span>\"
+    \"<span class=sf-dump-key>created_at</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2023-08-28 11:11:51</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>mail_config</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>sms_config</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+    \"<span class=sf-dump-key>global_shortcodes</span>\" => \"<span class=sf-dump-str title=\"6 characters\">object</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-723925141\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","activeTemplate":"<pre class=sf-dump id=sf-dump-1915036482 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"16 characters\">presets.default.</span>\"
+</pre><script>Sfdump(\"sf-dump-1915036482\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","activeTemplateTrue":"<pre class=sf-dump id=sf-dump-454756434 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"23 characters\">assets/presets/default/</span>\"
+</pre><script>Sfdump(\"sf-dump-454756434\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","language":"<pre class=sf-dump id=sf-dump-1230878744 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Database\\Eloquent\\Collection</span> {<a class=sf-dump-ref>#604</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:2</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"App\\Models\\Language
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Language</span> {<a class=sf-dump-ref>#1228</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"9 characters\">languages</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+    <span class=sf-dump-index>1</span> => <span class=sf-dump-note title=\"App\\Models\\Language
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Language</span> {<a class=sf-dump-ref>#1229</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"9 characters\">languages</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>}
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1230878744\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","emptyMessage":"<pre class=sf-dump id=sf-dump-1528460140 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"7 characters\">No data</span>\"
+</pre><script>Sfdump(\"sf-dump-1528460140\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","errors":"<pre class=sf-dump id=sf-dump-1731605324 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1662</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1731605324\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","pageTitle":"<pre class=sf-dump id=sf-dump-2069610242 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"16 characters\">Manage Home Page</span>\"
+</pre><script>Sfdump(\"sf-dump-2069610242\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","pdata":"<pre class=sf-dump id=sf-dump-2084386246 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\Page</span> {<a class=sf-dump-ref>#1691</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"5 characters\">pages</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:8</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"4 characters\">Home</span>\"
+    \"<span class=sf-dump-key>slug</span>\" => \"<span class=sf-dump-str>/</span>\"
+    \"<span class=sf-dump-key>tempname</span>\" => \"<span class=sf-dump-str title=\"16 characters\">presets.default.</span>\"
+    \"<span class=sf-dump-key>secs</span>\" => \"<span class=sf-dump-str title=\"123 characters\">[&quot;feature&quot;,&quot;fact&quot;,&quot;choose_us&quot;,&quot;call_to_action&quot;,&quot;portfolio&quot;,&quot;service&quot;,&quot;pricing&quot;,&quot;blog&quot;,&quot;clients&quot;,&quot;newsletter&quot;,&quot;appointment&quot;]</span>\"
+    \"<span class=sf-dump-key>is_default</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2020-07-11 08:23:58</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2023-03-27 07:06:43</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:8</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"4 characters\">Home</span>\"
+    \"<span class=sf-dump-key>slug</span>\" => \"<span class=sf-dump-str>/</span>\"
+    \"<span class=sf-dump-key>tempname</span>\" => \"<span class=sf-dump-str title=\"16 characters\">presets.default.</span>\"
+    \"<span class=sf-dump-key>secs</span>\" => \"<span class=sf-dump-str title=\"123 characters\">[&quot;feature&quot;,&quot;fact&quot;,&quot;choose_us&quot;,&quot;call_to_action&quot;,&quot;portfolio&quot;,&quot;service&quot;,&quot;pricing&quot;,&quot;blog&quot;,&quot;clients&quot;,&quot;newsletter&quot;,&quot;appointment&quot;]</span>\"
+    \"<span class=sf-dump-key>is_default</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2020-07-11 08:23:58</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2023-03-27 07:06:43</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-2084386246\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","sections":"<pre class=sf-dump id=sf-dump-1531371683 data-indent-pad=\"  \"><span class=sf-dump-note>array:19</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>about</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"8 characters\">About Us</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:5</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:2</span> [ &#8230;2]
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>description</span>\" => \"<span class=sf-dump-str title=\"8 characters\">textarea</span>\"
+      \"<span class=sf-dump-key>experience</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>content_list</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>true</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>about_dark</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>false</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"13 characters\">About Us Dark</span>\"
+    \"<span class=sf-dump-key>content</span>\" => []
+  </samp>]
+  \"<span class=sf-dump-key>banner</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>no_selection</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"14 characters\">Banner Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>sub_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>blog</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"12 characters\">Blog Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>sub_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>description</span>\" => \"<span class=sf-dump-str title=\"13 characters\">textarea-rich</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>false</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>brand</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"13 characters\">Brand Section</span>\"
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>url</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>false</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>choose_us</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"17 characters\">Choose Us Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:7</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>sub_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>top_heading_2</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>sub_heading_2</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>url</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>service_icon</span>\" => \"<span class=sf-dump-str title=\"4 characters\">icon</span>\"
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>description</span>\" => \"<span class=sf-dump-str title=\"8 characters\">textarea</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>false</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>contact_us</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>no_selection</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"10 characters\">Contact Us</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:9</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>short_description</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>email_address</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>contact_details</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>contact_number</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>latitude</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>longitude</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>website_footer</span>\" => \"<span class=sf-dump-str title=\"13 characters\">textarea-rich</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>counter</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"15 characters\">Counter Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>counter_digit</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>true</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>faq</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"11 characters\">FAQ Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>sub_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>question</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>answer</span>\" => \"<span class=sf-dump-str title=\"13 characters\">textarea-rich</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>false</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>footer_company_links</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>no_selection</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"22 characters\">Footer - Company Links</span>\"
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>url</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>true</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>footer_important_links</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>no_selection</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"24 characters\">Footer - Important Links</span>\"
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>url</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>true</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>plan</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"12 characters\">Plan Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>sub_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>policy_pages</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>false</span>
+    \"<span class=sf-dump-key>no_selection</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"12 characters\">Policy Pages</span>\"
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>details</span>\" => \"<span class=sf-dump-str title=\"13 characters\">textarea-rich</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>false</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>portfolio</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"17 characters\">Portfolio Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>sub_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>service</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"15 characters\">Service Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>sub_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>social_icon</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>no_selection</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"12 characters\">Social Icons</span>\"
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>social_icon</span>\" => \"<span class=sf-dump-str title=\"4 characters\">icon</span>\"
+      \"<span class=sf-dump-key>url</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>false</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>subscribe</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"17 characters\">Subscribe Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>sub_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>team_member</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"19 characters\">Team Member Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>subheading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:11</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>email</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>description</span>\" => \"<span class=sf-dump-str title=\"8 characters\">textarea</span>\"
+      \"<span class=sf-dump-key>facebook_icon</span>\" => \"<span class=sf-dump-str title=\"4 characters\">icon</span>\"
+      \"<span class=sf-dump-key>facebook_link</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>instagram_icon</span>\" => \"<span class=sf-dump-str title=\"4 characters\">icon</span>\"
+      \"<span class=sf-dump-key>instagram_link</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>twitter_icon</span>\" => \"<span class=sf-dump-str title=\"4 characters\">icon</span>\"
+      \"<span class=sf-dump-key>twitter_link</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>true</span>
+    </samp>]
+  </samp>]
+  \"<span class=sf-dump-key>testimonial</span>\" => <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>builder</span>\" => <span class=sf-dump-const>true</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"19 characters\">Testimonial Section</span>\"
+    \"<span class=sf-dump-key>content</span>\" => <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>top_heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>heading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>subheading</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>element</span>\" => <span class=sf-dump-note>array:6</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>images</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>title</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>designation</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>description</span>\" => \"<span class=sf-dump-str title=\"8 characters\">textarea</span>\"
+      \"<span class=sf-dump-key>star_count</span>\" => \"<span class=sf-dump-str title=\"4 characters\">text</span>\"
+      \"<span class=sf-dump-key>modal</span>\" => <span class=sf-dump-const>true</span>
+    </samp>]
+  </samp>]
+</samp>]
+</pre><script>Sfdump(\"sf-dump-1531371683\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): htmlspecialchars(): Argument #1 ($string) must be of type string, array given at C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php:124)
+[stacktrace]
+#0 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(124): htmlspecialchars(Array, 11, 'UTF-8', true)
+#1 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\resources\\views\\admin\\frontend\\builder\\index.blade.php(50): e(Array)
+#2 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Users\\\\Admin\\\\...')
+#3 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\Admin\\\\...', Array)
+#5 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\Admin\\\\...', Array)
+#6 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(207): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Admin\\\\...', Array)
+#7 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(190): Illuminate\\View\\View->getContents()
+#8 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(159): Illuminate\\View\\View->renderContents()
+#9 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#10 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#11 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(918): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#12 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(885): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#13 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\app\\Http\\Middleware\\RedirectIfNotAdmin.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\RedirectIfNotAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\app\\Http\\Middleware\\LanguageMiddleware.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\LanguageMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#27 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\beyondcode\\laravel-query-detector\\src\\QueryDetectorMiddleware.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): BeyondCode\\QueryDetector\\QueryDetectorMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#59 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#61 C:\\Program Files\\Herd\\resources\\app.asar.unpacked\\resources\\valet\\server.php(139): require('C:\\\\Users\\\\Admin\\\\...')
+#62 {main}
+
+[previous exception] [object] (TypeError(code: 0): htmlspecialchars(): Argument #1 ($string) must be of type string, array given at C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php:124)
+[stacktrace]
+#0 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(124): htmlspecialchars(Array, 11, 'UTF-8', true)
+#1 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\storage\\framework\\views\\a87cb83cfacfc5a2d4773ecf3f189b2d.php(50): e(Array)
+#2 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Users\\\\Admin\\\\...')
+#3 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\Admin\\\\...', Array)
+#5 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\Admin\\\\...', Array)
+#6 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(207): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Admin\\\\...', Array)
+#7 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(190): Illuminate\\View\\View->getContents()
+#8 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(159): Illuminate\\View\\View->renderContents()
+#9 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#10 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#11 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(918): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#12 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(885): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#13 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\app\\Http\\Middleware\\RedirectIfNotAdmin.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\RedirectIfNotAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\app\\Http\\Middleware\\LanguageMiddleware.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): App\\Http\\Middleware\\LanguageMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#27 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\beyondcode\\laravel-query-detector\\src\\QueryDetectorMiddleware.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): BeyondCode\\QueryDetector\\QueryDetectorMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#59 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\application\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Admin\\Desktop\\finbiz\\Files\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#61 C:\\Program Files\\Herd\\resources\\app.asar.unpacked\\resources\\valet\\server.php(139): require('C:\\\\Users\\\\Admin\\\\...')
+#62 {main}
+"} 
