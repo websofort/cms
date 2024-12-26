@@ -77,25 +77,25 @@
                                         <span style="top: -1px; left: 369px;"></span>
                                     </button>
                                 </div>
-{{--                                @if ($credentials->google->status == 1 || $credentials->facebook->status == 1 || $credentials->linkedin->status == 1)--}}
-{{--                                <div class="col-12">--}}
-{{--                                    <hr class="hr" data-content="OR">--}}
-{{--                                </div>--}}
-{{--                                <div class="col-12">--}}
-{{--                                    <div class="social">--}}
-{{--                                        @if ($credentials->google->status == 1)--}}
-{{--                                        <a href="{{ route('user.social.login', 'google') }}" class="icon">--}}
-{{--                                            <i class="fa-brands fa-google"></i>--}}
-{{--                                        </a>--}}
-{{--                                        @endif--}}
-{{--                                        @if ($credentials->facebook->status == 1)--}}
-{{--                                        <a href="{{ route('user.social.login', 'facebook') }}" class="icon">--}}
-{{--                                            <i class="fa-brands fa-facebook"></i>--}}
-{{--                                        </a>--}}
-{{--                                        @endif--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                @endif--}}
+                                @if ($credentials->google->status == 1 || $credentials->facebook->status == 1 || $credentials->linkedin->status == 1)
+                                <div class="col-12">
+                                    <hr class="hr" data-content="OR">
+                                </div>
+                                <div class="col-12">
+                                    <div class="social">
+                                        @if ($credentials->google->status == 1)
+                                        <a href="{{ route('user.social.login', 'google') }}" class="icon">
+                                            <i class="fa-brands fa-google"></i>
+                                        </a>
+                                        @endif
+                                        @if ($credentials->facebook->status == 1)
+                                        <a href="{{ route('user.social.login', 'facebook') }}" class="icon">
+                                            <i class="fa-brands fa-facebook"></i>
+                                        </a>
+                                        @endif
+                                    </div>
+                                </div>
+                                @endif
                                 <div class="col-sm-12">
                                     <div class="have-account text-center">
                                         <p class="have-account__text"> @lang('Already Have An Account')?<a href="{{route('user.login')}}" class="have-account__link text--base">@lang('Login Now')</a></p>

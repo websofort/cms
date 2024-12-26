@@ -63,6 +63,13 @@ trait FileInfo
         $data['about'] = [
             'path'      =>'assets/images/frontend/about',
         ];
+        $data['call_to_action'] = [
+            'path'      =>'assets/images/frontend/call_to_action',
+        ];
+
+        $data['dynamic_tariff'] = [
+            'path'      =>'assets/images/frontend/dynamic_tariff',
+        ];
         $data['ThemeTwoAbout'] = [
             'path'      =>'assets/images/frontend/theme_two_about',
         ];

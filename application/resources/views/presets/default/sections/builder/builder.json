@@ -45,6 +45,42 @@
             "modal": true
         }
     },
+    "call_to_action": {
+        "builder": true,
+        "name": "Call to action Section",
+        "content": {
+            "images":{
+                "call_to_action_1":{
+                    "size":"470x470"
+                }
+            },
+            "top_heading": "text",
+            "heading": "text",
+            "description": "textarea"
+        },
+        "element": {
+            "content_list": "text",
+            "modal": true
+        }
+    },
+    "dynamic_tariff": {
+        "builder": true,
+        "name": "Dynamic tariff Section",
+        "content": {
+            "images":{
+                "dynamic_tariff_1":{
+                    "size":"1920x1080"
+                }
+            },
+            "heading": "text",
+            "description": "textarea"
+        },
+        "element": {
+            "content_list": "text",
+            "modal": true
+        }
+    },
+
     "about_dark": {
         "builder": false,
         "name": "About Us Dark",
@@ -68,6 +104,14 @@
             "top_heading": "text",
             "heading": "text",
             "sub_heading": "text"
+        }
+    },
+    "understanding_pricing": {
+        "builder": true,
+        "name": "Understanding Pricing Section",
+        "content": {
+            "heading": "text",
+            "sub_heading": "textarea"
         }
     },
     "choose_us": {
@@ -94,6 +138,20 @@
             "modal": false
         }
     },
+    "savings": {
+        "builder": true,
+        "name": "Savings Section",
+        "content": {
+            "heading": "text"
+        },
+        "element": {
+            "service_icon": "icon",
+            "title": "text",
+            "description": "textarea",
+            "modal": false
+        }
+    },
+
     "counter": {
         "builder": true,
         "name": "Counter Section",

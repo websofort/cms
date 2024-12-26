@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="row gy-4 align-items-center">
             <div class="col-lg-6">
                 <div class="accordion custom--accordion" id="accordionExample">

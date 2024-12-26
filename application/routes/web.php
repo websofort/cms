@@ -18,6 +18,13 @@ Route::controller('TicketController')->prefix('ticket')->group(function () {
     Route::get('/download/{ticket}', 'ticketDownload')->name('ticket.download');
 });
 
+Route::controller('TariffsWizardController')->group(function(){
+    Route::get('tariffs', 'handleTariffSteps')->name('tariffs.steps');
+    Route::post('tariffs/step1', 'processStep1')->name('tariffs.processStep1');
+    Route::post('tariffs/step2', 'processStep2')->name('tariffs.processStep2');
+    Route::post('tariffs/step3', 'processStep3')->name('tariffs.processStep3');
+});
+
 Route::get('app/deposit/confirm/{hash}', 'Gateway\PaymentController@appDepositConfirm')->name('deposit.app.confirm');
 
 Route::controller('SiteController')->group(function () {

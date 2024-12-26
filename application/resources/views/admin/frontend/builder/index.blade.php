@@ -46,8 +46,9 @@
             </div>
             <div class="card-body">
                 <ol class="simple_with_no_drop vertical">
+
                     @foreach($sections as $k => $secs)
-                        {{dump($secs)}}
+
                     @if(!@$secs['no_selection'])
                     <li class="highlight icon-move clearfix d-flex align-items-center">
                         <i class="fas fa-expand-arrows-alt"></i>

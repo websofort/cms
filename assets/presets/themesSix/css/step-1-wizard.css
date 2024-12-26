@@ -1,0 +1,920 @@
+
+:root {
+    /* === Font Family === */
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Montserrat", sans-serif;
+    /* === TypoGraphy ===*/
+    --heading-one: clamp(1.5rem, 2.8vw + 1rem, 3.75rem);
+    --heading-two: clamp(1.375rem, 1.7vw + 1rem, 2.5rem);
+    --heading-three: clamp(1.25rem, .8vw + 1rem, 1.875rem);
+    --heading-four: clamp(1.125rem, .5vw + 1rem, 1.5rem);
+    --heading-five: clamp(1.0625rem, .3vw + 1rem, 1.25rem);
+    --heading-six: 1rem;
+    /* ======================== Color Variables Start ===========================*/
+    /*== White Color ==*/
+    --white: 0 0% 100%;
+    /*== Light Color ==*/
+    --light-h: 0;
+    --light-s: 0%;
+    --light-l: 78%;
+    --light: var(--light-h) var(--light-s) var(--light-l);
+    /*== Black Color ==*/
+    --black-h: 0;
+    --black-s: 0%;
+    --black-l: 0%;
+    --black: var(--black-h) var(--black-s) var(--black-l);
+    --heading-color: var(--black);
+    --body-color: 0 0% 27%;
+    --border-color: 0 0% 88%;
+    --body-background: 0 0% 100%;
+    --section-bg: 208 100% 97%;
+    /*================================ Border-radius ===============================*/
+    --border-radius: 40px 0px 40px;
+    --border-radius-sm: 5px 0px 5px;
+    /*================================ Box Shadow Start ===============================*/
+    --header-box-shadow: 0px -1px 15px 3px hsl(var(--black) /.3);
+    --mobile-box-shadow: 0px -1px 5px 0px hsl(var(--black) /.92);
+    --box-shadow: 0px 2px 15px hsl(var(--black) /.05);
+    /* ================================ Base Light Color =============================== */
+    --base-light-h: 152;
+    --base-light-s: 100%;
+    --base-light-l: 50%;
+    --base-light: var(--base-light-h) var(--base-light-s) var(--base-light-l);
+    /*========================= Base Color =============================*/
+    --base-h: 255;
+    --base-s: 77%;
+    --base-l: 57%;
+    --base: var(--base-h) var(--base-s) var(--base-l);
+    /*== Base Darken ==*/
+    --base-d-100: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.1);
+    --base-d-200: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.2);
+    --base-d-300: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.3);
+    --base-d-400: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.4);
+    --base-d-500: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.5);
+    --base-d-600: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.6);
+    --base-d-700: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.7);
+    --base-d-700: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.7);
+    --base-d-800: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.8);
+    --base-d-800: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.8);
+    --base-d-900: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.9);
+    /*== Base Lighten ==*/
+    --base-l-100: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.1);
+    --base-l-200: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.2);
+    --base-l-300: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.3);
+    --base-l-400: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.4);
+    --base-l-500: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.5);
+    --base-l-600: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.6);
+    --base-l-700: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.7);
+    --base-l-800: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.8);
+    --base-l-900: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.9);
+    --background-gradient: linear-gradient(45deg, hsl(var( --base)), hsl(var(--base-two)));
+    /*========================= Base Two Color =============================*/
+    --base-two-h: 39;
+    --base-two-s: 83%;
+    --base-two-l: 67%;
+    --base-two: var(--base-two-h) var(--base-two-s) var(--base-two-l);
+    /*== Base Two Darken ==*/
+    --base-two-d-100: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.05);
+    --base-two-d-200: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.1);
+    --base-two-d-300: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.2);
+    --base-two-d-400: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.3);
+    --base-two-d-500: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.4);
+    --base-two-d-600: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.5);
+    --base-two-d-700: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.6);
+    --base-two-d-800: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.7);
+    --base-two-d-900: var(--base-two-h) var(--base-two-s) calc(var(--base-two-l) - var(--base-two-l) * 0.8);
+    /*=== Base Two Lighten ===*/
+    --base-two-l-100: var(--base-two-h) calc(var(--base-two-s)) calc(var(--base-two-l) + (100% - var(--base-two-l)) * 0.05);
+    --base-two-l-200: var(--base-two-h) calc(var(--base-two-s)) calc(var(--base-two-l) + (100% - var(--base-two-l)) * 0.1);
+    --base-two-l-300: var(--base-two-h) calc(var(--base-two-s)) calc(var(--base-two-l) + (100% - var(--base-two-l)) * 0.2);
+    --base-two-l-400: var(--base-two-h) calc(var(--base-two-s)) calc(var(--base-two-l) + (100% - var(--base-two-l)) * 0.3);
+    --base-two-l-500: var(--base-two-h) calc(var(--base-two-s)) calc(var(--base-two-l) + (100% - var(--base-two-l)) * 0.4);
+    --base-two-l-600: var(--base-two-h) calc(var(--base-two-s)) calc(var(--base-two-l) + (100% - var(--base-two-l)) * 0.5);
+    --base-two-l-700: var(--base-two-h) calc(var(--base-two-s)) calc(var(--base-two-l) + (100% - var(--base-two-l)) * 0.6);
+    --base-two-l-800: var(--base-two-h) calc(var(--base-two-s)) calc(var(--base-two-l) + (100% - var(--base-two-l)) * 0.7);
+    --base-two-l-900: var(--base-two-h) calc(var(--base-two-s)) calc(var(--base-two-l) + (100% - var(--base-two-l)) * 0.8);
+    /*=== Dark Color ===*/
+    --dark-h: 228;
+    --dark-s: 67%;
+    --dark-l: 12%;
+    --dark: var(--dark-h) var(--dark-s) var(--dark-l);
+    --dark-d-100: var(--dark-h) var(--dark-s) calc(var(--dark-l) - var(--dark-l) * 0.1);
+    --dark-d-200: var(--dark-h) var(--dark-s) calc(var(--dark-l) - var(--dark-l) * 0.2);
+    --dark-d-300: var(--dark-h) var(--dark-s) calc(var(--dark-l) - var(--dark-l) * 0.3);
+    --dark-d-400: var(--dark-h) var(--dark-s) calc(var(--dark-l) - var(--dark-l) * 0.4);
+    --dark-d-500: var(--dark-h) var(--dark-s) calc(var(--dark-l) - var(--dark-l) * 0.5);
+    --dark-d-600: var(--dark-h) var(--dark-s) calc(var(--dark-l) - var(--dark-l) * 0.6);
+    --dark-l-100: var(--dark-h) calc(var(--dark-s)) calc(var(--dark-l) + (100% - var(--dark-l)) * 0.1);
+    --dark-l-200: var(--dark-h) calc(var(--dark-s)) calc(var(--dark-l) + (100% - var(--dark-l)) * 0.2);
+    --dark-l-300: var(--dark-h) calc(var(--dark-s)) calc(var(--dark-l) + (100% - var(--dark-l)) * 0.3);
+    --dark-l-400: var(--dark-h) calc(var(--dark-s)) calc(var(--dark-l) + (100% - var(--dark-l)) * 0.4);
+    --dark-l-500: var(--dark-h) calc(var(--dark-s)) calc(var(--dark-l) + (100% - var(--dark-l)) * 0.5);
+    --dark-l-600: var(--dark-h) calc(var(--dark-s)) calc(var(--dark-l) + (100% - var(--dark-l)) * 0.6);
+    /*========================= Bootstrap Modifier Start ========================*/
+    --primary-h: 211;
+    --primary-s: 100%;
+    --primary-l: 50%;
+    --primary: var(--primary-h) var(--primary-s) var(--primary-l);
+    /*=== Primary Darken ===*/
+    --primary-d-100: var(--primary-h) var(--primary-s) calc(var(--primary-l) - var(--primary-l) * 0.1);
+    --primary-d-200: var(--primary-h) var(--primary-s) calc(var(--primary-l) - var(--primary-l) * 0.2);
+    --primary-d-300: var(--primary-h) var(--primary-s) calc(var(--primary-l) - var(--primary-l) * 0.3);
+    --primary-d-400: var(--primary-h) var(--primary-s) calc(var(--primary-l) - var(--primary-l) * 0.4);
+    --primary-d-500: var(--primary-h) var(--primary-s) calc(var(--primary-l) - var(--primary-l) * 0.5);
+    /*=== primary Lighten ===*/
+    --primary-l-100: var(--primary-h) calc(var(--primary-s)) calc(var(--primary-l) + (100% - var(--primary-l)) * 0.1);
+    --primary-l-200: var(--primary-h) calc(var(--primary-s)) calc(var(--primary-l) + (100% - var(--primary-l)) * 0.2);
+    --primary-l-300: var(--primary-h) calc(var(--primary-s)) calc(var(--primary-l) + (100% - var(--primary-l)) * 0.3);
+    --primary-l-400: var(--primary-h) calc(var(--primary-s)) calc(var(--primary-l) + (100% - var(--primary-l)) * 0.4);
+    --primary-l-500: var(--primary-h) calc(var(--primary-s)) calc(var(--primary-l) + (100% - var(--primary-l)) * 0.5);
+    --primary-l-600: var(--primary-h) calc(var(--primary-s)) calc(var(--primary-l) + (100% - var(--primary-l)) * 0.6);
+    /*=== Secondary Color ===*/
+    --secondary-h: 210;
+    --secondary-s: 11%;
+    --secondary-l: 71%;
+    --secondary: var(--secondary-h) var(--secondary-s) var(--secondary-l);
+    /*=== Secondary Darken ===*/
+    --secondary-d-100: var(--secondary-h) var(--secondary-s) calc(var(--secondary-l) - var(--secondary-l) * 0.1);
+    --secondary-d-200: var(--secondary-h) var(--secondary-s) calc(var(--secondary-l) - var(--secondary-l) * 0.2);
+    --secondary-d-300: var(--secondary-h) var(--secondary-s) calc(var(--secondary-l) - var(--secondary-l) * 0.3);
+    --secondary-d-400: var(--secondary-h) var(--secondary-s) calc(var(--secondary-l) - var(--secondary-l) * 0.4);
+    --secondary-d-500: var(--secondary-h) var(--secondary-s) calc(var(--secondary-l) - var(--secondary-l) * 0.5);
+    /*=== secondary Lighten ===*/
+    --secondary-l-100: var(--secondary-h) calc(var(--secondary-s)) calc(var(--secondary-l) + (100% - var(--secondary-l)) * 0.1);
+    --secondary-l-200: var(--secondary-h) calc(var(--secondary-s)) calc(var(--secondary-l) + (100% - var(--secondary-l)) * 0.2);
+    --secondary-l-300: var(--secondary-h) calc(var(--secondary-s)) calc(var(--secondary-l) + (100% - var(--secondary-l)) * 0.3);
+    --secondary-l-400: var(--secondary-h) calc(var(--secondary-s)) calc(var(--secondary-l) + (100% - var(--secondary-l)) * 0.4);
+    --secondary-l-500: var(--secondary-h) calc(var(--secondary-s)) calc(var(--secondary-l) + (100% - var(--secondary-l)) * 0.5);
+    --secondary-l-600: var(--secondary-h) calc(var(--secondary-s)) calc(var(--secondary-l) + (100% - var(--secondary-l)) * 0.6);
+    /*=== Success Color ===*/
+    --success-h: 115;
+    --success-s: 100%;
+    --success-l: 47%;
+    --success: var(--success-h) var(--success-s) var(--success-l);
+    /*=== Success Darken ===*/
+    --success-d-100: var(--success-h) var(--success-s) calc(var(--success-l) - var(--success-l) * 0.1);
+    --success-d-200: var(--success-h) var(--success-s) calc(var(--success-l) - var(--success-l) * 0.2);
+    --success-d-300: var(--success-h) var(--success-s) calc(var(--success-l) - var(--success-l) * 0.3);
+    --success-d-400: var(--success-h) var(--success-s) calc(var(--success-l) - var(--success-l) * 0.4);
+    --success-d-500: var(--success-h) var(--success-s) calc(var(--success-l) - var(--success-l) * 0.5);
+    /*=== Success Lighten ===*/
+    --success-l-100: var(--success-h) calc(var(--success-s)) calc(var(--success-l) + (100% - var(--success-l)) * 0.1);
+    --success-l-200: var(--success-h) calc(var(--success-s)) calc(var(--success-l) + (100% - var(--success-l)) * 0.2);
+    --success-l-300: var(--success-h) calc(var(--success-s)) calc(var(--success-l) + (100% - var(--success-l)) * 0.3);
+    --success-l-400: var(--success-h) calc(var(--success-s)) calc(var(--success-l) + (100% - var(--success-l)) * 0.4);
+    --success-l-500: var(--success-h) calc(var(--success-s)) calc(var(--success-l) + (100% - var(--success-l)) * 0.5);
+    --success-l-600: var(--success-h) calc(var(--success-s)) calc(var(--success-l) + (100% - var(--success-l)) * 0.6);
+    /*=== Danger Color ==*/
+    --danger-h: 0;
+    --danger-s: 96%;
+    --danger-l: 63%;
+    --danger: var(--danger-h) var(--danger-s) var(--danger-l);
+    /*=== Danger Darken ===*/
+    --danger-d-100: var(--danger-h) var(--danger-s) calc(var(--danger-l) - var(--danger-l) * 0.1);
+    --danger-d-200: var(--danger-h) var(--danger-s) calc(var(--danger-l) - var(--danger-l) * 0.2);
+    --danger-d-300: var(--danger-h) var(--danger-s) calc(var(--danger-l) - var(--danger-l) * 0.3);
+    --danger-d-400: var(--danger-h) var(--danger-s) calc(var(--danger-l) - var(--danger-l) * 0.4);
+    --danger-d-500: var(--danger-h) var(--danger-s) calc(var(--danger-l) - var(--danger-l) * 0.5);
+    /*=== danger Lighten ===*/
+    --danger-l-100: var(--danger-h) calc(var(--danger-s)) calc(var(--danger-l) + (100% - var(--danger-l)) * 0.1);
+    --danger-l-200: var(--danger-h) calc(var(--danger-s)) calc(var(--danger-l) + (100% - var(--danger-l)) * 0.2);
+    --danger-l-300: var(--danger-h) calc(var(--danger-s)) calc(var(--danger-l) + (100% - var(--danger-l)) * 0.3);
+    --danger-l-400: var(--danger-h) calc(var(--danger-s)) calc(var(--danger-l) + (100% - var(--danger-l)) * 0.4);
+    --danger-l-500: var(--danger-h) calc(var(--danger-s)) calc(var(--danger-l) + (100% - var(--danger-l)) * 0.5);
+    --danger-l-600: var(--danger-h) calc(var(--danger-s)) calc(var(--danger-l) + (100% - var(--danger-l)) * 0.6);
+    /*=== Warning Color ===*/
+    --warning-h: 29;
+    --warning-s: 88%;
+    --warning-l: 59%;
+    --warning: var(--warning-h) var(--warning-s) var(--warning-l);
+    /*=== Warning Darken ===*/
+    --warning-d-100: var(--warning-h) var(--warning-s) calc(var(--warning-l) - var(--warning-l) * 0.1);
+    --warning-d-200: var(--warning-h) var(--warning-s) calc(var(--warning-l) - var(--warning-l) * 0.2);
+    --warning-d-300: var(--warning-h) var(--warning-s) calc(var(--warning-l) - var(--warning-l) * 0.3);
+    --warning-d-400: var(--warning-h) var(--warning-s) calc(var(--warning-l) - var(--warning-l) * 0.4);
+    --warning-d-500: var(--warning-h) var(--warning-s) calc(var(--warning-l) - var(--warning-l) * 0.5);
+    /*===  Warning Lighten ===*/
+    --warning-l-100: var(--warning-h) calc(var(--warning-s)) calc(var(--warning-l) + (100% - var(--warning-l)) * 0.1);
+    --warning-l-200: var(--warning-h) calc(var(--warning-s)) calc(var(--warning-l) + (100% - var(--warning-l)) * 0.2);
+    --warning-l-300: var(--warning-h) calc(var(--warning-s)) calc(var(--warning-l) + (100% - var(--warning-l)) * 0.3);
+    --warning-l-400: var(--warning-h) calc(var(--warning-s)) calc(var(--warning-l) + (100% - var(--warning-l)) * 0.4);
+    --warning-l-500: var(--warning-h) calc(var(--warning-s)) calc(var(--warning-l) + (100% - var(--warning-l)) * 0.5);
+    --warning-l-600: var(--warning-h) calc(var(--warning-s)) calc(var(--warning-l) + (100% - var(--warning-l)) * 0.6);
+    /*=== Info Color ===*/
+    --info-h: 196;
+    --info-s: 100%;
+    --info-l: 50%;
+    --info: var(--info-h) var(--info-s) var(--info-l);
+    /*=== Info Darken ===*/
+    --info-d-100: var(--info-h) var(--info-s) calc(var(--info-l) - var(--info-l) * 0.1);
+    --info-d-200: var(--info-h) var(--info-s) calc(var(--info-l) - var(--info-l) * 0.2);
+    --info-d-300: var(--info-h) var(--info-s) calc(var(--info-l) - var(--info-l) * 0.3);
+    --info-d-400: var(--info-h) var(--info-s) calc(var(--info-l) - var(--info-l) * 0.4);
+    --info-d-500: var(--info-h) var(--info-s) calc(var(--info-l) - var(--info-l) * 0.5);
+    /*=== nfo Lighten ===*/
+    --info-l-100: var(--info-h) calc(var(--info-s)) calc(var(--info-l) + (100% - var(--info-l)) * 0.1);
+    --info-l-200: var(--info-h) calc(var(--info-s)) calc(var(--info-l) + (100% - var(--info-l)) * 0.2);
+    --info-l-300: var(--info-h) calc(var(--info-s)) calc(var(--info-l) + (100% - var(--info-l)) * 0.3);
+    --info-l-400: var(--info-h) calc(var(--info-s)) calc(var(--info-l) + (100% - var(--info-l)) * 0.4);
+    --info-l-500: var(--info-h) calc(var(--info-s)) calc(var(--info-l) + (100% - var(--info-l)) * 0.5);
+    --info-l-600: var(--info-h) calc(var(--info-s)) calc(var(--info-l) + (100% - var(--info-l)) * 0.6);
+    /*=== Violet Color ===*/
+    --violet-h: 251;
+    --violet-s: 96%;
+    --violet-l: 63%;
+    --violet: var(--violet-h) var(--violet-s) var(--violet-l);
+    /*=== Violet Darken ===*/
+    --violet-d-100: var(--violet-h) var(--violet-s) calc(var(--violet-l) - var(--violet-l) * 0.1);
+    --violet-d-200: var(--violet-h) var(--violet-s) calc(var(--violet-l) - var(--violet-l) * 0.2);
+    --violet-d-300: var(--violet-h) var(--violet-s) calc(var(--violet-l) - var(--violet-l) * 0.3);
+    --violet-d-400: var(--violet-h) var(--violet-s) calc(var(--violet-l) - var(--violet-l) * 0.4);
+    --violet-d-500: var(--violet-h) var(--violet-s) calc(var(--violet-l) - var(--violet-l) * 0.5);
+    /*=== Violet Lighten ===*/
+    --violet-l-100: var(--violet-h) calc(var(--violet-s)) calc(var(--violet-l) + (100% - var(--violet-l)) * 0.1);
+    --violet-l-200: var(--violet-h) calc(var(--violet-s)) calc(var(--violet-l) + (100% - var(--violet-l)) * 0.2);
+    --violet-l-300: var(--violet-h) calc(var(--violet-s)) calc(var(--violet-l) + (100% - var(--violet-l)) * 0.3);
+    --violet-l-400: var(--violet-h) calc(var(--violet-s)) calc(var(--violet-l) + (100% - var(--violet-l)) * 0.4);
+    --violet-l-500: var(--violet-h) calc(var(--violet-s)) calc(var(--violet-l) + (100% - var(--violet-l)) * 0.5);
+    --violet-l-600: var(--violet-h) calc(var(--violet-s)) calc(var(--violet-l) + (100% - var(--violet-l)) * 0.6);
+    /*=== Yellow Color ===*/
+    --yellow-h: 50;
+    --yellow-s: 100%;
+    --yellow-l: 50%;
+    --yellow: var(--yellow-h) var(--yellow-s) var(--yellow-l);
+    /*=== Yellow Darken ===*/
+    --yellow-d-100: var(--yellow-h) var(--yellow-s) calc(var(--yellow-l) - var(--yellow-l) * 0.1);
+    --yellow-d-200: var(--yellow-h) var(--yellow-s) calc(var(--yellow-l) - var(--yellow-l) * 0.2);
+    --yellow-d-300: var(--yellow-h) var(--yellow-s) calc(var(--yellow-l) - var(--yellow-l) * 0.3);
+    --yellow-d-400: var(--yellow-h) var(--yellow-s) calc(var(--yellow-l) - var(--yellow-l) * 0.4);
+    --yellow-d-500: var(--yellow-h) var(--yellow-s) calc(var(--yellow-l) - var(--yellow-l) * 0.5);
+    /*=== yellow Lighten ===*/
+    --yellow-l-100: var(--yellow-h) calc(var(--yellow-s)) calc(var(--yellow-l) + (100% - var(--yellow-l)) * 0.1);
+    --yellow-l-200: var(--yellow-h) calc(var(--yellow-s)) calc(var(--yellow-l) + (100% - var(--yellow-l)) * 0.2);
+    --yellow-l-300: var(--yellow-h) calc(var(--yellow-s)) calc(var(--yellow-l) + (100% - var(--yellow-l)) * 0.3);
+    --yellow-l-400: var(--yellow-h) calc(var(--yellow-s)) calc(var(--yellow-l) + (100% - var(--yellow-l)) * 0.4);
+    --yellow-l-500: var(--yellow-h) calc(var(--yellow-s)) calc(var(--yellow-l) + (100% - var(--yellow-l)) * 0.5);
+    --yellow-l-600: var(--yellow-h) calc(var(--yellow-s)) calc(var(--yellow-l) + (100% - var(--yellow-l)) * 0.6);
+    /*======================= Bootstrap Modifier End ==============================*/
+}
+
+
+body {
+    font-family: var(--heading-font);
+    color: hsl(var(--white));
+    word-break: break-word;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(var(--dark));
+
+}
+
+p {
+    font-family: var(--body-font);
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+    word-break: break-word;
+    color: #000;
+    line-height: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px 0;
+    font-family: var(--heading-font);
+    color: hsl(var(--white));
+    line-height: 1.1;
+    word-break: break-word;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: hsl(var(--dark));
+    border-bottom: 1px solid hsl(var(--white) / 0.08);
+}
+
+.header-bar img {
+    height: 40px;
+}
+
+.header-bar a {
+    display: flex;
+    align-items: center;
+    color: hsl(var(--base));
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-bar a .elementor-icon {
+    margin-right: 5px;
+}
+
+.container-body{
+    height: 93.5%;
+    background-color: hsl(var(--base) / 0.05);
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+
+.container {
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    margin-top: 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #152a3a inset !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+
+.container {
+
+    width: 100%;
+    max-width: 500px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 576px) {
+
+    .form-card{
+        padding: 20px 35px;
+    }
+
+}
+
+.first-row{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+    .first-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-card {
+    background-color: hsl(var(--dark));
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(72, 28, 205, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.half {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+
+.form-group.zip {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.floating-label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+}
+
+.underline-input:focus ~ .floating-label{
+    top: 0;
+    font-size: 12px;  /
+color: hsl(var(--base));
+    transition: 0.2s;
+}
+
+
+.underline-input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--color-primary);
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    padding: 5px 0;
+    font-weight: bold;
+    caret-color: #fff;
+
+}
+
+.underline-input:focus {
+    border-bottom-color: hsl(var(--base));
+}
+
+.smart-meter-offer {
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; 
+    background-color: #fff; 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.toggle-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #008000; /* Green border */
+    background-color: #fff;
+    color: #008000; /* Green text */
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+.content {
+    display: none; /* Initially hide the content */
+    margin-top: 10px;
+}
+.smart-meter-offer.active .content {
+    display: block; /* Show the content when active */
+}
+
+.fee {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.details-link {
+    color: #008000; /* Green link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.form-group.zip .underline-input {
+    padding-top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 20px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: white;
+}
+
+.underline-input:focus {
+    ~ .form__label {
+        position: absolute;
+        top: -5px;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: white;
+        font-weight:700;
+        padding-bottom: 10px;
+    }
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+
+}
+
+.underline-input:not(:placeholder-shown) ~ .form__label {
+    position: absolute;
+    top: -5px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: white;
+    font-weight:700;
+}
+
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.household-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rounded-btn {
+    background-color: transparent;
+    border: 2px solid hsl(var(--base));
+    color: hsl(var(--base));
+    padding: 0 10px;
+    //border-radius: 50%;
+    border-radius: 15px 0px 15px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 105px;
+    height: 40px;
+    text-align: center;
+}
+
+.household-size i{
+    color: hsl(var(--base));
+}
+
+.input-with-suffix {
+    display: flex;
+    align-items: center;
+}
+
+.form--control input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid hsl(var(--base));
+    color: #fff;
+    width: 80%;
+    font-size: 16px;
+    outline: none;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.input-with-suffix span {
+    margin-left: 10px;
+    color: hsl(var(--base));
+    font-size: 16px;
+}
+
+.input-with-suffix input:focus {
+    border-bottom-color: hsl(var(--base));
+}
+
+.underline-input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid hsl(var(--base));
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    padding: 5px;
+}
+
+.underline-input:focus {
+    border-bottom-color: hsl(var(--base));
+}
+
+.underline-input.error {
+    border-bottom-color: #ff5c5c;
+}
+
+
+
+
+.input-with-suffix {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.input-with-suffix input {
+    border: none;
+    border-bottom: 2px solid hsl(var(--base));
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    padding-right: 30px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.input-with-suffix .suffix {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    font-size: 16px;
+    padding-bottom: 6px;
+    transition: left 0.2s ease;
+}
+
+.input-with-suffix i.fa-solid.fa-bolt {
+    position: absolute;
+    left: 5px; /* Adjust to align with input */
+    color: hsl(var(--base));
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.input-with-suffix input.error {
+    border-bottom-color: #ff5c5c;
+}
+
+i {
+    font-size: 20px;
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid lightgrey;
+    border-radius: 15px;
+    padding: 3px 15px;
+    cursor: pointer;
+    background-color: hsl(var(--base) / 0.05);
+    height: 100px;
+}
+
+.checkbox-container.checked {
+    border-color: hsl(var(--base));
+}
+
+.checkbox-container img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+
+.details{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkmark {
+    margin-left: auto;
+    display: none;
+    color: #34D399;
+    font-size: 1.5em;
+}
+
+.checkbox-container.checked .checkmark {
+    display: block;
+}
+
+.checkboxs{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+@media (max-width: 768px) {
+    .checkboxs {
+        grid-template-columns: 1fr;
+    }
+}
+
+.checkbox-inside{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100%;
+}
+.custom-checkbox{
+    padding: 0;
+    margin: 0;
+}
+
+/* Create a custom checkbox */
+input[type="checkbox"] {
+    position: relative;
+    width: 1.5em;
+    height: 1.5em;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 4px;
+    appearance: none;
+    outline: 0;
+    cursor: pointer;
+    transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 3px;
+        left: 7.5px;
+        width: 7px;
+        height: 12px;
+        border-style: solid;
+        border-color: white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+    &:checked {
+        color: white;
+        border-color: hsl(var(--base));
+        background: hsl(var(--base));
+        &::before {
+            opacity: 1;
+        }
+        ~ label::before {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+}
+
+label {
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    user-select: none;
+    &::before {
+        position: absolute;
+        content: attr(data-content);
+        color: lightgray;
+        clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+        text-decoration: line-through;
+        text-decoration-thickness: 3px;
+        text-decoration-color: black;
+        transition: clip-path 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.btn {
+    color: hsl(var(--white));
+    font-weight: 500;
+    padding: 12px 22px;
+    border-radius: 15px 0px 15px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    border: 1px solid transparent;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: 0.5s;
+    font-family: var(--heading-font);
+    font-size: 17px;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0px;
+    background-color: hsl(var(--white));
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 15px 0px 15px;
+    transition: 0.5s;
+}
+
+.btn--base {
+    background-color: hsl(var(--base));
+    color: hsl(var(--white));
+}
+
+.btn--base:hover::before {
+    height: 100%;
+    width: 100%;
+}
+
+.btn--base:hover, .btn--base:focus {
+    background-color: hsl(var(--white));
+    border: 1px solid hsl(var(--base));
+    color: hsl(var(--base));
+    border-radius: 15px 0px 15px;
+}
+
+.btn--base.pill {
+    border-radius: 35px;
+}
+
+.btn--base.outline {
+    background-color: transparent;
+    border: 1px solid hsl(var(--base));
+    color: hsl(var(--black));
+}
+
+.btn--base.outline.hover-white-c:hover, .btn--base.outline.hover-white-c:focus {
+    color: hsl(var(--black));
+}
+
+.btn--base.outline:hover, .btn--base.outline:focus {
+    background-color: hsl(var(--base));
+    color: hsl(var(--base));
+}
+
+.fa-user, .fa-bolt{
+    color: hsl(var(--base));
+}
+
+.form--control{
+    color: var(--white);
+}
+
+.form--control:focus{
+    color: var(--white);
+}
+
+.col-sm-12 {
+    position: relative; /* Ensure the parent div allows absolute positioning */
+}
+
+.suffix {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    white-space: nowrap; /* Prevent the suffix from wrapping */
+    transition: left 0.2s ease; /* Smooth transition for moving the suffix */
+    padding-left: 5px;
+}

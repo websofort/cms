@@ -11,25 +11,11 @@
     <link href="{{ asset('assets/common/css/all.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('assets/common/css/line-awesome.min.css')}}">
 
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/icofont.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/slicknav.min.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/owl-carousel.css')}}">
-
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/datepicker.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/normalize.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/responsive.css')}}">
-
     <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/custom-animation.css')}}">
     <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/slick.css')}}">
     <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/odometer.css')}}">
     <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/main.css')}}">
-    <link rel="stylesheet" href="{{asset($activeTemplateTrue.'css/style.css')}}">
 
     @stack('style-lib')
     @stack('style')
@@ -51,36 +37,16 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
- <script src="{{asset($activeTemplateTrue.'js/jquery.min.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/jquery-migrate-3.0.0.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/jquery-ui.min.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/easing.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/colors.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/bootstrap-datepicker.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/jquery.nav.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/slicknav.min.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/jquery.scrollUp.min.js')}}"></script>
-
- <script src="{{asset($activeTemplateTrue.'js/niceselect.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/tilt.jquery.min.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/owl-carousel.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/jquery.counterup.min.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/steller.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/wow.min.js')}}"></script>
- <script src="{{asset($activeTemplateTrue.'js/jquery.magnific-popup.min.js')}}"></script>
- <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-
-{{--<script src="{{asset('assets/common/js/jquery-3.7.1.min.js')}}"></script>--}}
-{{--<script src="{{asset('assets/common/js/bootstrap.bundle.min.js')}}"></script>--}}
-{{--<script src="{{asset($activeTemplateTrue.'js/popper.min.js')}}"></script>--}}
-{{--<script src="{{asset($activeTemplateTrue.'js/bootstrap.min.js')}}"></script>--}}
-{{--<script src="{{asset($activeTemplateTrue.'js/slick.min.js')}}"></script>--}}
-{{--<script src="{{asset($activeTemplateTrue.'js/moment.min.js')}}"></script>--}}
-{{--<script src="{{asset($activeTemplateTrue.'js/jquery.appear.min.js')}}"></script>--}}
-{{--<script src="{{asset($activeTemplateTrue.'js/jquery.magnific-popup.min.js')}}"></script>--}}
-{{--<script src="{{asset($activeTemplateTrue.'js/odometer.min.js')}}"></script>--}}
-{{--<script src="{{asset($activeTemplateTrue.'js/viewport.jquery.js')}}"></script>--}}
+<script src="{{asset('assets/common/js/jquery-3.7.1.min.js')}}"></script>
+<script src="{{asset('assets/common/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/popper.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/bootstrap.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/slick.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/moment.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/jquery.appear.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/odometer.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/viewport.jquery.js')}}"></script>
 <script src="{{asset($activeTemplateTrue.'js/main.js')}}"></script>
 
 @stack('script-lib')
