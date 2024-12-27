@@ -24,7 +24,7 @@
             <div class="col-lg-6 col-md-6">
                   <div class="banner-left__content">
                     <span class="subtitle">{{__(@$banner->data_values->top_heading)}}</span>
-                      <h2>{{__(@$banner->data_values->heading)}}</h2>
+                      <h2>@lang(__(@$banner->data_values->heading))</h2>
                       <p>
                         @if(strlen(__(@$banner->data_values->sub_heading)) >180)
                             {{substr( __(@$banner->data_values->sub_heading), 0,180).'...' }}

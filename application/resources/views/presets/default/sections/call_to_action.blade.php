@@ -19,7 +19,7 @@
             <div class="col-lg-6">
                 <div class="about-right-content">
                     <div class="section-heading mb-0">
-                        <span class="subtitle">{{__(@$about->data_values->top_heading)}}</span>
+                        <span class="subtitle">@lang((@$about->data_values->top_heading))</span>
                         <h2 class="section-heading__title">{{__(@$about->data_values->heading)}}</h2>
                         <p class="section-heading__desc mb-3">
                             @if(strlen(__(@$about->data_values->description)) >280)

@@ -67,6 +67,10 @@ trait FileInfo
             'path'      =>'assets/images/frontend/call_to_action',
         ];
 
+        $data['hourly_price'] = [
+            'path'      =>'assets/images/frontend/hourly_price',
+        ];
+
         $data['dynamic_tariff'] = [
             'path'      =>'assets/images/frontend/dynamic_tariff',
         ];

@@ -8677,3 +8677,57 @@ button.deposit-search {
 .account-form .social .icon i {
     font-size: 20px;
 }
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.accordion-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.accordion-title span {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+}
+
+
+.accordion-content.open {
+    max-height: 500px;
+    padding: 10px 0;
+}

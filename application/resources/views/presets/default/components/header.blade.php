@@ -73,11 +73,12 @@ $pages = App\Models\Page::where('tempname',$activeTemplate)->get();
                                     <i class='fas fa-sun sun-icon'></i>
                                 </div>
                             </li>
-                            @auth
+                            <li><a class='btn btn--base' href="https://tidycal.com/strom"><i class="fa-solid fa-arrow-up-right-from-square"></i> @lang('Free advice')</a></li>
+                            {{--@auth
                             <li><a class='btn btn--base' href="{{route('user.home')}}">@lang('Dashboard')</a></li>
                             @else
                             <li><a class='btn btn--base' href="{{route('user.login')}}"><i class="fas fa-sign-in-alt"></i> @lang('Login')</a></li>
-                            @endauth
+                            @endauth--}}
                             <li><i class="fas fa-bars sidebar-menu-show-hide"></i></li>
                         </ul>
                     </div>

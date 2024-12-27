@@ -61,6 +61,16 @@
                 </div>
                 <div class="col-xl-2 col-sm-6">
                     <div class="footer-item">
+                        <h5 class="footer-item__title">@lang('Important Link')</h5>
+                        <ul class="footer-menu">
+                            @foreach($importantLinks as $link)
+                                <li class="footer-menu__item"><a href="{{url('/').$link->data_values->url}}" class="footer-menu__link">{{$link->data_values->title}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="footer-item">
                         <h5 class="footer-item__title">@lang('Company Links')</h5>
                         <ul class="footer-menu">
                             @foreach($companyLinks as $link)
@@ -73,16 +83,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="footer-item">
-                        <h5 class="footer-item__title">@lang('Important Link')</h5>
-                        <ul class="footer-menu">
-                            @foreach($importantLinks as $link)
-                            <li class="footer-menu__item"><a href="{{url('/').$link->data_values->url}}" class="footer-menu__link">{{$link->data_values->title}}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
+
                 <div class="col-xl-3 col-sm-6">
                     <div class="footer-item">
                         <h5 class="footer-item__title">@lang('Newsletter')</h5>

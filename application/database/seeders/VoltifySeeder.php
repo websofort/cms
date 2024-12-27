@@ -194,7 +194,126 @@ class VoltifySeeder extends Seeder
             ]);
         }
 
+        $frontend = Frontend::where('data_keys', 'hourly_price.content')->first();
+        $data_values = [
+            "has_image" => "1",
+            "heading" => "Wie beeinflusst der stündlich ändernde Strompreis den Tarif für Verbraucher?",
+            "sub_heading" => "Die stündlich ändernden Preise können den Stromverbrauch stark beeinflussen. Verbraucher werden dazu motiviert, ihren Stromverbrauch auf Zeiten zu verlagern, in denen der Strompreis besonders niedrig ist und so lässt sich Geld sparen. Dies kann beispielsweise geschehen, indem energieintensive Geräte wie Waschmaschinen oder Geschirrspüler zu Zeiten mit niedrigen Strompreisen betrieben werden.",
+            "hourly_price_background" => "676e697ebf81a1735289214.png"
+        ];
+        if ($frontend) {
+            $frontend->update([
+                'data_values' => $data_values
+            ]);
+        }
+
+        $data_values = [
+            "title" => "Geld sparen mit dynamischen Stromtarifen",
+            "description" => "Das Verhalten der Verbraucher hat einen direkten Einfluss auf die Stromrechnung, insbesondere bei dynamischen Stromtarifen. Ein intelligentes Verbrauchsverhalten, das sich an den variablen Strompreisen orientiert, kann zu erheblicher Ersparnis führen. Ein dynamischer Stromtarif bietet Endkonsumenten die Chance, ihren Verbrauch in Zeiten hoher Strompreise zu reduzieren und Zeiten mit niedrigen Preisen zu nutzen. Durch den Einsatz eines Smart Meters können die Verbraucher den Arbeitspreis für ihren Stromverbrauch genau verfolgen und ihren Verbrauch gezielt steuern. Dies führt nicht nur zu direkten Kosteneinsparungen, sondern trägt auch zu einer effizienteren Nutzung von Strom aus erneuerbaren Energien bei."
+        ];
+        Frontend::create([
+            'data_keys' => 'hourly_price.element',
+            'data_values' => $data_values
+        ]);
+
+        $data_values = [
+            "title" => "Dynamische Stromtarife vs. klassische Tarife: Ein Vergleich",
+            "description" => "Im Vergleich zu klassischen Tarifen bieten dynamische Stromtarife eine größere Flexibilität und die Möglichkeit, den Strompreis aktiv zu beeinflussen. Während klassische Tarife meist einen fixen Preis pro Kilowattstunde haben, können Verbraucherschwankungen bei dynamischen Tarifen genutzt werden, um Geld zu sparen."
+        ];
+        Frontend::create([
+            'data_keys' => 'hourly_price.element',
+            'data_values' => $data_values
+        ]);
+
+
+        $frontend = Frontend::where('data_keys', 'why_choose.content')->first();
+        $data_values = [
+            "heading" => "Warum dynamische Tarife überzeugen:",
+        ];
+        if ($frontend) {
+            $frontend->update([
+                'data_values' => $data_values
+            ]);
+        }
+
+        $data_values = [
+            "service_icon" => "<i class=\"fas fa-cogs\"></i>",
+            "title" => "Intelligente Steuerung:",
+            "description" => "Nutzen Sie Strom zu den günstigsten Zeiten, indem Sie Ihren Verbrauch in Phasen verlagern, wenn Wind- und Solarenergie den Markt dominieren und die Preise sinken. Der Preis pro kWh kann sich stündlich ändern – profitieren Sie davon."
+        ];
+        Frontend::create([
+            'data_keys' => 'why_choose.element',
+            'data_values' => $data_values
+        ]);
+
+        $data_values = [
+            "service_icon" => "<i class=\"fas fa-chart-line\"></i>",
+            "title" => "Effizientes Verbrauchsmanagement:",
+            "description" => "Unsere Smart Meter überwachen Ihren Verbrauch in Echtzeit und identifizieren die optimalen Zeiten für energieintensive Aktivitäten. So wird das Energiesparen einfach und effektiv."
+        ];
+
+        Frontend::create([
+            'data_keys' => 'why_choose.element',
+            'data_values' => $data_values
+        ]);
+
+        $frontend = Frontend::where('data_keys', 'contact_us.content')->first();
+        $data_values = [
+            "has_image" => "1",
+            "title" => "Contact Us",
+            "short_description" => "",
+            "email_address" => "strom@voltify.energy",
+            "contact_details" => "Yokohamastraße 2, 20457 Hamburg-HafenCity",
+            "contact_number" => "040-30376305",
+            "latitude" => "",
+            "longitude" => "",
+            "website_footer" => "<p>Copyright 2024. All rights reserved.<\/p>",
+            "contact_image" => "643bca29c29ed1681639977.jpg",
+            "theme_four_contact_image" => "65e6b703508551709618947.png",
+            "theme_five_contact_image" => "65e86c36cb5f61709730870.png"
+        ];
+        if ($frontend) {
+            $frontend->update([
+                'data_values' => $data_values
+            ]);
+        }
         // Updating the Page model (fix for secs)
+
+        Frontend::where('data_keys', 'footer_important_links.element')->delete();
+
+        $data_values = [
+            "title" => "Home",
+            "url" => "/"
+        ];
+        Frontend::create([
+            'data_keys' => 'footer_important_links.element',
+            'data_values' => $data_values,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        $data_values = [
+            "title" => "About us",
+            "url" => "/about"
+        ];
+        Frontend::create([
+            'data_keys' => 'footer_important_links.element',
+            'data_values' => $data_values,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        $data_values = [
+            "title" => "Downloads",
+            "url" => "/downloads"
+        ];
+        Frontend::create([
+            'data_keys' => 'footer_important_links.element',
+            'data_values' => $data_values,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
 
         $page = Page::where('slug', '/')->where('tempname','presets.default.')->first();
         if ($page) {
@@ -202,7 +321,7 @@ class VoltifySeeder extends Seeder
                 'tempname' => 'presets.default.',
                 'slug' => '/',
                 'name' => 'Home',
-                'secs' => json_encode(["about","call_to_action","choose_us","savings","dynamic_tariff","service","brand","understanding_pricing"]),
+                'secs' => json_encode(["choose_us","call_to_action","savings","dynamic_tariff","service","brand","understanding_pricing"]),
                 'updated_at' => now(),
             ]);
         }else{
@@ -214,6 +333,15 @@ class VoltifySeeder extends Seeder
                 'updated_at' => now(),
             ]);
         }
+
+
+        Page::where('slug','!=','/')->where('tempname',"presets.default")->delete();
+        Page::create(['name' => 'About us', 'slug' => '/about','secs' => json_encode(['about']),
+            'tempname' => 'presets.default.','is_default' => '1',
+            'created_at' => now(), 'updated_at' => now()]);
+        Page::create(['name' => 'Downloads', 'slug' => '/downloads','secs' => json_encode(['']),
+            'tempname' => 'presets.default.','is_default' => '1',
+            'created_at' => now(), 'updated_at' => now()]);
 
         // Using updateOrCreate for default presets theme (fix for secs)
         $page = Page::where('slug', '/')->where('tempname','presets.themesSix.')->first();
