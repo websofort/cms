@@ -3,7 +3,7 @@
     $chooseUsElements = getContent('savings.element',false,6);
 @endphp
 <!-- ==================== Why Choose us Start Here ==================== -->
-<section class="why-choose-area section-bg py-80">
+<section class="why-choose-area py-80">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

@@ -54,6 +54,35 @@ checkboxContainers.forEach(container => {
     });
 });
 
+function calculateKWh(peopleCount) {
+    const baseKWh = 1350;
+    const increments = [900, 700, 650, 700];
+    const defaultIncrement = 700;
+
+    if (peopleCount <= 0) return 0;
+
+    let totalKWh = baseKWh;
+
+    for (let i = 1; i < peopleCount; i++) {
+        if (i <= increments.length) {
+            totalKWh += increments[i - 1];
+        } else {
+            totalKWh += defaultIncrement;
+        }
+    }
+
+    return totalKWh;
+}
+
+// Example usage
+console.log(calculateKWh(1)); // 1350
+console.log(calculateKWh(2)); // 2250
+console.log(calculateKWh(3)); // 2950
+console.log(calculateKWh(4)); // 3600
+console.log(calculateKWh(5)); // 4300
+console.log(calculateKWh(6)); //
+
+
 const decreaseBtn = document.getElementById('decrease-btn');
 const increaseBtn = document.getElementById('increase-btn');
 const householdSizeDisplay = document.getElementById('household-size');
@@ -79,6 +108,7 @@ increaseBtn.addEventListener('click', (event) => {
 function updateDisplay() {
     householdSizeDisplay.textContent = householdSize;
     householdSizeInput.value = householdSize ?? 2;
+    powerInput.value = calculateKWh(householdSize);
 }
 
 const electricCar = document.getElementById('electric-car');

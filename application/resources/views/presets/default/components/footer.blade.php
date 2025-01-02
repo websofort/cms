@@ -64,7 +64,7 @@
                         <h5 class="footer-item__title">@lang('Important Link')</h5>
                         <ul class="footer-menu">
                             @foreach($importantLinks as $link)
-                                <li class="footer-menu__item"><a href="{{url('/').$link->data_values->url}}" class="footer-menu__link">{{$link->data_values->title}}</a></li>
+                                <li class="footer-menu__item"><a href="{{url('/').$link->data_values->url}}" class="footer-menu__link">@lang($link->data_values->title)</a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -74,10 +74,10 @@
                         <h5 class="footer-item__title">@lang('Company Links')</h5>
                         <ul class="footer-menu">
                             @foreach($companyLinks as $link)
-                            <li class="footer-menu__item"><a href="{{url('/').$link->data_values->url}}" class="footer-menu__link">{{$link->data_values->title}}</a></li>
+                            <li class="footer-menu__item"><a href="{{url('/').$link->data_values->url}}" class="footer-menu__link">@lang($link->data_values->title)}</a></li>
                             @endforeach
                             @foreach($links as $link)
-                            <li class="footer-menu__item"><a href="{{ route('policy.pages', [slug($link->data_values->title), $link->id]) }}" class="footer-menu__link">{{$link->data_values->title}}</a></li>
+                            <li class="footer-menu__item"><a href="{{ route('policy.pages', [slug($link->data_values->title), $link->id]) }}" class="footer-menu__link">@lang($link->data_values->title)</a></li>
                             @endforeach
 
                         </ul>
