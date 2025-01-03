@@ -34,12 +34,16 @@
 @yield('content')
 
 
-
-<script src="{{asset($activeTemplateTrue.'js/jquery.scrollUp.min.js')}}"></script>
-
-
+<script src="{{asset('assets/common/js/jquery-3.7.1.min.js')}}"></script>
+<script src="{{asset('assets/common/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/popper.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/bootstrap.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/slick.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/moment.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/jquery.appear.min.js')}}"></script>
 <script src="{{asset($activeTemplateTrue.'js/jquery.magnific-popup.min.js')}}"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="{{asset($activeTemplateTrue.'js/odometer.min.js')}}"></script>
+<script src="{{asset($activeTemplateTrue.'js/viewport.jquery.js')}}"></script>
 <script src="{{asset($activeTemplateTrue.'js/step-1-wizard.js')}}"></script>
 
 

@@ -14,8 +14,10 @@
                 <div class="form-group zip">
                     <div class="col-sm-12">
                         <label class="form-label">@lang('ZIP')</label>
-                        <input name="zip-code"  id="zip-code" type="text" class="form--control"  value="{{ old('zip-code', $oldData['zip-code'] ?? '') }}"
-                              required>
+                        <input name="zip-code" id="zip-code" type="text" class="form--control"
+                               value="{{ old('zip-code', $oldData['zip-code'] ?? '') }}" autocomplete="off" required>
+
+                        <ul id="zip-suggestions" class="autocomplete-suggestions" style="display: none"></ul>
                     </div>
                 </div>
 
@@ -99,3 +101,52 @@
 </div>
     </div>
 @endsection
+<script src="{{asset('assets/common/js/jquery-3.7.1.min.js')}}"></script>
+<script>
+    $(document).ready(function () {
+        $('#zip-code').on('input', function () {
+            const query = $(this).val();
+
+            if (query.length >= 1) {
+                $.ajax({
+                    url: '/api/zip-codes',
+                    method: 'GET',
+                    data: { search: query },
+                    success: function (data) {
+                        let suggestions = '';
+                        if (data.length > 0) {
+                            data.forEach(item => {
+                                suggestions += `
+                                <li data-zip="${item.zip_code}" data-street="${item.street}">
+                                    <div class="zip-street">
+                                        <span class="zip">${item.zip_code}</span>,
+                                        <span class="street">${item.street}</span>
+                                    </div>
+                                </li>`;
+                            });
+                        } else {
+                            suggestions = '<li>No suggestions found</li>';
+                        }
+                        $('#zip-suggestions').html(suggestions).show();
+                    },
+                });
+            } else {
+                $('#zip-suggestions').hide();
+            }
+        });
+
+
+        $(document).on('click', '#zip-suggestions li', function () {
+            const selectedZip = $(this).data('zip');
+            const selectedStreet = $(this).data('street');
+            $('#zip-code').val(`${selectedZip}, ${selectedStreet}`);
+            $('#zip-suggestions').hide();
+        });
+
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.form-group.zip').length) {
+                $('#zip-suggestions').hide();
+            }
+        });
+    });
+</script>

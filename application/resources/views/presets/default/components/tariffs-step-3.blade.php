@@ -60,7 +60,7 @@
                         <div class="col-sm-8">
                             <label class="form-label">@lang('Location')</label>
                             <input name="location" id="location" type="text" class="form--control"
-                                   value="{{ old('location', $oldData['location'] ?? '') }}"
+                                   value="{{ old('location', $location->city ?? '') }}"
                                    required>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         <div class="col-sm-8">
                             <label class="form-label">@lang('Street')</label>
                             <input name="street" id="street" type="text" class="form--control"
-                                   value="{{ old('street', $oldData['street'] ?? '') }}"
+                                   value="{{ old('street', $step1Data['street'] ?? '') }}"
                                    required>
                         </div>
                         <div class="col-sm-4">
