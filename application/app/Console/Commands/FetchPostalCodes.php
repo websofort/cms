@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Street;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use App\Models\ZipCode;
@@ -72,13 +73,17 @@ class FetchPostalCodes extends Command
                     foreach ($streetsData as $street) {
                         $streetName = $street['name'] ?? null;
                         $locality = $street['locality'] ?? null;
+                        $federalState = $street['federalState']['name'] ?? null;
 
-                        if ($streetName && $locality) {
-                            ZipCode::firstOrCreate(
-                                ['zip_code' => $zipCode, 'street' => $streetName],
-                                ['city' => $locality]
+                        $cityWithState = $federalState ? "{$locality}, {$federalState}" : $locality;
+
+                        if ($streetName && $cityWithState) {
+                            $zip = ZipCode::firstOrCreate(
+                                ['zip_code' => $zipCode, 'city' => $cityWithState],
                             );
-
+                            Street::firstOrCreate(
+                                ['street' => $streetName, 'zip_code_id' => $zip->id],
+                            );
                         }
                     }
                 }

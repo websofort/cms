@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('zip_codes', function (Blueprint $table) {
+        Schema::create('streets', function (Blueprint $table) {
             $table->id();
-            $table->string('zip_code');
-            $table->string('street');
-            $table->string('city');
+            $table->unsignedBigInteger('zip_code_id');
+            $table->foreign('zip_code_id')->references('id')->on('zip_codes')->onDelete('cascade');
+            $table->string('street_name');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('zip_codes');
+        Schema::dropIfExists('street');
     }
 };

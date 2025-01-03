@@ -74,15 +74,6 @@ function calculateKWh(peopleCount) {
     return totalKWh;
 }
 
-// Example usage
-console.log(calculateKWh(1)); // 1350
-console.log(calculateKWh(2)); // 2250
-console.log(calculateKWh(3)); // 2950
-console.log(calculateKWh(4)); // 3600
-console.log(calculateKWh(5)); // 4300
-console.log(calculateKWh(6)); //
-
-
 const decreaseBtn = document.getElementById('decrease-btn');
 const increaseBtn = document.getElementById('increase-btn');
 const householdSizeDisplay = document.getElementById('household-size');

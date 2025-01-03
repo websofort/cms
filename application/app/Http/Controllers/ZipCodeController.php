@@ -15,7 +15,7 @@ class ZipCodeController extends Controller
         $search = $request->get('search');
         $zipCodes = ZipCode::where('zip_code', 'LIKE', "%{$search}%")
             ->limit(25)
-            ->get(['zip_code', 'street']);
+            ->get(['zip_code', 'city']);
         return response()->json($zipCodes);
     }
 

@@ -117,10 +117,10 @@
                         if (data.length > 0) {
                             data.forEach(item => {
                                 suggestions += `
-                                <li data-zip="${item.zip_code}" data-street="${item.street}">
+                                <li data-zip="${item.zip_code}" data-street="${item.city}">
                                     <div class="zip-street">
                                         <span class="zip">${item.zip_code}</span>,
-                                        <span class="street">${item.street}</span>
+                                        <span class="street">${item.city}</span>
                                     </div>
                                 </li>`;
                             });
@@ -135,7 +135,11 @@
             }
         });
 
-
+        $('#zip-code').on('click', function () {
+            if ($('#zip-code').val().trim() !== '') {
+                $('#zip-suggestions').css('display', 'block');
+            }
+        });
         $(document).on('click', '#zip-suggestions li', function () {
             const selectedZip = $(this).data('zip');
             const selectedStreet = $(this).data('street');

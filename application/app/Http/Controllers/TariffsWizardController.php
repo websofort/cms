@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Locations;
+use App\Models\Street;
 use App\Models\ZipCode;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -50,7 +51,9 @@ class TariffsWizardController extends Controller
                 $step1Data = session()->get('step1_data', []);
                 $step2Data = session()->get('step2_data', []);
                 $oldData = session()->get('step3_data', []);
-                $location = ZipCode::where('zip_code', $step1Data['zip_code'])->where('street',$step1Data['street'])->first();
+
+                $zipCodeDetails = ZipCode::where('zip_code', $step1Data['zip_code'])->first();
+
 
                 $view = $this->activeTemplate . 'components.tariffs-step-3';
                 if (!$step1Data){
@@ -64,7 +67,7 @@ class TariffsWizardController extends Controller
                     $oldData = [];
                     return redirect()->route('tariffs.steps', ['step' => 2]);
                 }*/
-                return view($view, compact('pageTitle','step1Data','step2Data','oldData','location'));
+                return view($view, compact('pageTitle','step1Data','step2Data','oldData','zipCodeDetails',));
 
             default:
 
@@ -88,9 +91,9 @@ class TariffsWizardController extends Controller
         $parts = explode(',', $validatedData['zip-code']);
 
         $zipCode = isset($parts[0]) ? trim($parts[0]) : '';
-        $street = isset($parts[1]) ? trim($parts[1]) : '';
+        $city = isset($parts[1]) ? trim($parts[1]) : '';
         $validatedData['zip_code'] = $zipCode;
-        $validatedData['street'] = $street;
+        $validatedData['city'] = $city;
         session()->put('step1_data', $validatedData);
 
 
