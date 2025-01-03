@@ -13,7 +13,8 @@ class ZipCodeController extends Controller
     public function getZipCodes(Request $request)
     {
         $search = $request->get('search');
-        $zipCodes = Locations::where('zip_code', 'LIKE', "%{$search}%")
+        $zipCodes = ZipCode::where('zip_code', 'LIKE', "%{$search}%")
+            ->limit(25)
             ->get(['zip_code', 'street']);
         return response()->json($zipCodes);
     }

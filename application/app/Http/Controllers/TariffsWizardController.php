@@ -50,7 +50,7 @@ class TariffsWizardController extends Controller
                 $step1Data = session()->get('step1_data', []);
                 $step2Data = session()->get('step2_data', []);
                 $oldData = session()->get('step3_data', []);
-                $location = Locations::where('zip_code', $step1Data['zip_code'])->where('street',$step1Data['street'])->first();
+                $location = ZipCode::where('zip_code', $step1Data['zip_code'])->where('street',$step1Data['street'])->first();
 
                 $view = $this->activeTemplate . 'components.tariffs-step-3';
                 if (!$step1Data){
