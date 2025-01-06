@@ -70,7 +70,7 @@
                             <input name="street" id="street" type="text" class="form--control" autocomplete="off"
                                    value="{{ old('street', $address->street_name ?? '') }}"
                                    required>
-                            <ul id="street-suggestions" class="autocomplete-suggestions" ></ul>
+                            <ul id="street-suggestions" class="autocomplete-suggestions" style="display: none"></ul>
 
                         </div>
                         <div class="col-sm-4">
@@ -127,7 +127,8 @@
 
         $('#street').on('click', function () {
             if ($('#street').val().trim() !== '') {
-                $('#street-suggestions').css('display', 'block !important');
+                console.log("street not empty")
+                $('#street-suggestions').css('display', 'block');
 
             }
         });
