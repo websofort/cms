@@ -10,7 +10,7 @@ class Street extends Model
     use HasFactory;
 
     protected $table = 'streets';
-    protected $fillable = ['zip_code_id','street'];
+    protected $fillable = ['zip_code_id','street_name'];
 
     public function zipCode()
     {
