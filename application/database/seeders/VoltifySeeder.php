@@ -35,6 +35,13 @@ class VoltifySeeder extends Seeder
             $frontend->update([
                 'data_values' => $data_values
             ]);
+        }else{
+            Frontend::create([
+                'data_keys' => 'service.content',
+                'data_values' => $data_values,
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
         }
 
 
@@ -51,6 +58,13 @@ class VoltifySeeder extends Seeder
         if ($frontend) {
             $frontend->update([
                 'data_values' => $data_values
+            ]);
+        }else{
+            Frontend::create([
+                'data_keys' => 'choose_us.content',
+                'data_values' => $data_values,
+                'created_at' => now(),
+                'updated_at' => now()
             ]);
         }
 
@@ -101,6 +115,13 @@ class VoltifySeeder extends Seeder
             $frontend->update([
                 'data_values' => $data_values
             ]);
+        }else{
+            Frontend::create([
+                'data_keys' => 'call_to_action.content',
+                'data_values' => $data_values,
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
         }
 
         $frontend = Frontend::where('data_keys', 'savings.content')->first();
@@ -110,6 +131,13 @@ class VoltifySeeder extends Seeder
         if ($frontend) {
             $frontend->update([
                 'data_values' => $data_values
+            ]);
+        }else{
+            Frontend::create([
+                'data_keys' => 'savings.content',
+                'data_values' => $data_values,
+                'created_at' => now(),
+                'updated_at' => now()
             ]);
         }
 
@@ -177,6 +205,13 @@ class VoltifySeeder extends Seeder
             $frontend->update([
                 'data_values' => $data_values
             ]);
+        }else{
+            Frontend::create([
+                'data_keys' => 'understanding_pricing.content',
+                'data_values' => $data_values,
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
         }
 
         $frontend = Frontend::where('data_keys', 'dynamic_tariff.content')->first();
@@ -192,6 +227,13 @@ class VoltifySeeder extends Seeder
             $frontend->update([
                 'data_values' => $data_values
             ]);
+        }else{
+            Frontend::create([
+                'data_keys' => 'dynamic_tariff.content',
+                'data_values' => $data_values,
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
         }
 
         $frontend = Frontend::where('data_keys', 'hourly_price.content')->first();
@@ -204,6 +246,13 @@ class VoltifySeeder extends Seeder
         if ($frontend) {
             $frontend->update([
                 'data_values' => $data_values
+            ]);
+        }else{
+            Frontend::create([
+                'data_keys' => 'hourly_price.content',
+                'data_values' => $data_values,
+                'created_at' => now(),
+                'updated_at' => now()
             ]);
         }
 
@@ -233,6 +282,13 @@ class VoltifySeeder extends Seeder
         if ($frontend) {
             $frontend->update([
                 'data_values' => $data_values
+            ]);
+        }else{
+            Frontend::create([
+                'data_keys' => 'why_choose.content',
+                'data_values' => $data_values,
+                'created_at' => now(),
+                'updated_at' => now()
             ]);
         }
 
@@ -267,7 +323,7 @@ class VoltifySeeder extends Seeder
             "contact_number" => "040-30376305",
             "latitude" => "",
             "longitude" => "",
-            "website_footer" => "<p>Copyright 2024. All rights reserved.<\/p>",
+            "website_footer" => "<p> Copyright 2024. All rights reserved. </p>",
             "contact_image" => "643bca29c29ed1681639977.jpg",
             "theme_four_contact_image" => "65e6b703508551709618947.png",
             "theme_five_contact_image" => "65e86c36cb5f61709730870.png"
@@ -275,6 +331,13 @@ class VoltifySeeder extends Seeder
         if ($frontend) {
             $frontend->update([
                 'data_values' => $data_values
+            ]);
+        }else{
+            Frontend::create([
+                'data_keys' => 'contact_us.content',
+                'data_values' => $data_values,
+                'created_at' => now(),
+                'updated_at' => now()
             ]);
         }
         // Updating the Page model (fix for secs)
@@ -294,7 +357,7 @@ class VoltifySeeder extends Seeder
 
         $data_values = [
             "title" => "About us",
-            "url" => "/about"
+            "url" => "about"
         ];
         Frontend::create([
             'data_keys' => 'footer_important_links.element',
@@ -321,7 +384,8 @@ class VoltifySeeder extends Seeder
                 'tempname' => 'presets.default.',
                 'slug' => '/',
                 'name' => 'Home',
-                'secs' => json_encode(["choose_us","call_to_action","savings","dynamic_tariff","service","brand","understanding_pricing"]),
+                'is_default' => '1',
+                'secs' => json_encode(["choose_us","call_to_action","choose_us","savings","dynamic_tariff","service","why_choose","hourly_price","understanding_pricing"]),
                 'updated_at' => now(),
             ]);
         }else{
@@ -329,17 +393,21 @@ class VoltifySeeder extends Seeder
                 'tempname' => 'presets.default.',
                 'slug' => '/',
                 'name' => 'Home',
-                'secs' => json_encode(["about", "blog", "brand", "choose_us", "counter", "faq", "plan", "portfolio", "service", "subscribe", "team_member", "testimonial"]),
+                'is_default' => '1',
+                'secs' => json_encode(["choose_us","call_to_action","choose_us","savings","dynamic_tariff","service","why_choose","hourly_price","understanding_pricing"]),
                 'updated_at' => now(),
             ]);
         }
 
 
-        Page::where('slug','!=','/')->where('tempname',"presets.default")->delete();
-        Page::create(['name' => 'About us', 'slug' => '/about','secs' => json_encode(['about']),
+        $page = Page::where('slug','!=','/')->where('tempname',"presets.default.")->get();
+        foreach ($page as $item) {
+            $item->delete();
+        }
+        Page::create(['name' => 'About us', 'slug' => 'about','secs' => json_encode(['about']),
             'tempname' => 'presets.default.','is_default' => '1',
             'created_at' => now(), 'updated_at' => now()]);
-        Page::create(['name' => 'Downloads', 'slug' => '/downloads','secs' => json_encode(['']),
+        Page::create(['name' => 'Downloads', 'slug' => 'downloads','secs' => json_encode(['']),
             'tempname' => 'presets.default.','is_default' => '1',
             'created_at' => now(), 'updated_at' => now()]);
 

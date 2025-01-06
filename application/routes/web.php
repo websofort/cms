@@ -25,6 +25,9 @@ Route::controller('TariffsWizardController')->group(function(){
     Route::post('tariffs/step3', 'processStep3')->name('tariffs.processStep3');
 });
 
+Route::get('/zip-codes', [\App\Http\Controllers\ZipCodeController::class, 'getZipCodes']);
+Route::get('/{zip_code}/street', [\App\Http\Controllers\StreetController::class, 'getStreet']);
+
 Route::get('app/deposit/confirm/{hash}', 'Gateway\PaymentController@appDepositConfirm')->name('deposit.app.confirm');
 
 Route::controller('SiteController')->group(function () {
