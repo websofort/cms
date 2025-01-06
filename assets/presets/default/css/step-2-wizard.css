@@ -542,3 +542,43 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .next-step3{
     align-self: center;
 }
+
+.autocomplete-suggestions {
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    background: hsl(var(--base) / 1);
+    border: 1px solid hsl(var(--base));
+    border-radius: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 96%;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.autocomplete-suggestions::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid hsl(var(--base));
+}
+
+.autocomplete-suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.autocomplete-suggestions li:hover {
+    background-color: #0e153a;
+    border-radius: 10px;
+}
+
+.col-sm-8 {
+    position: relative;
+}

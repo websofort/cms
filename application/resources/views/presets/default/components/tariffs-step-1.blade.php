@@ -109,7 +109,7 @@
 
             if (query.length >= 1) {
                 $.ajax({
-                    url: '/api/zip-codes',
+                    url: '/zip-codes',
                     method: 'GET',
                     data: { search: query },
                     success: function (data) {

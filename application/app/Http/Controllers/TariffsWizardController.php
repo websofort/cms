@@ -54,7 +54,6 @@ class TariffsWizardController extends Controller
 
                 $zipCodeDetails = ZipCode::where('zip_code', $step1Data['zip_code'])->first();
 
-
                 $view = $this->activeTemplate . 'components.tariffs-step-3';
                 if (!$step1Data){
                     $view = $this->activeTemplate . 'components.tariffs-step-2';

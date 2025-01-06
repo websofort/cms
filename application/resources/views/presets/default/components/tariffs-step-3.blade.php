@@ -54,7 +54,7 @@
                         <div class="col-sm-4">
                             <label class="form-label">@lang('PLZ')</label>
                             <input name="zip-code" id="zip-code" type="text" class="form--control"
-                                   value="{{ old('zip-code', $step1Data['zip-code'] ?? '') }}" disabled
+                                   value="{{ old('zip-code', $step1Data['zip_code'] ?? '') }}" disabled
                                    required>
                         </div>
                         <div class="col-sm-8">
@@ -67,9 +67,11 @@
                     <div class="row">
                         <div class="col-sm-8">
                             <label class="form-label">@lang('Street')</label>
-                            <input name="street" id="street" type="text" class="form--control"
+                            <input name="street" id="street" type="text" class="form--control" autocomplete="off"
                                    value="{{ old('street', $address->street_name ?? '') }}"
                                    required>
+                            <ul id="street-suggestions" class="autocomplete-suggestions" style="display: none"></ul>
+
                         </div>
                         <div class="col-sm-4">
                             <label class="form-label">@lang('House number')</label>
@@ -86,3 +88,58 @@
     </div>
 
 @endsection
+
+<script src="{{asset('assets/common/js/jquery-3.7.1.min.js')}}"></script>
+<script>
+    const zipCodeId = {{ $zipCodeDetails->id ?? 0}}
+
+    $(document).ready(function () {
+        $('#street').on('input', function () {
+            const query = $(this).val();
+            console.log(zipCodeId);
+            if (query.length >= 1) {
+                $.ajax({
+                    url: "/"+zipCodeId + '/street',
+                    method: 'GET',
+                    data: { search: query },
+                    success: function (data) {
+                        console.log(data);
+                        let suggestions = '';
+                        if (data.length > 0) {
+                            data.forEach(item => {
+                                suggestions += `
+                                <li data-street="${item}">
+                                    <div class="zip-street">
+                                        <span class="zip">${item}</span>
+                                    </div>
+                                </li>`;
+                            });
+                        } else {
+                            suggestions = '<li>No suggestions found</li>';
+                        }
+                        $('#street-suggestions').html(suggestions).show();
+                    },
+                });
+            } else {
+                $('#street-suggestions').hide();
+            }
+        });
+
+        $('#street').on('click', function () {
+            if ($('#street').val().trim() !== '') {
+                $('#street-suggestions').css('display', 'block');
+            }
+        });
+        $(document).on('click', '#street-suggestions li', function () {
+            const selectedStreet = $(this).data('street');
+            $('#street').val(`${selectedStreet}`);
+            $('#street-suggestions').hide();
+        });
+
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.form-group.street').length) {
+                $('#street-suggestions').hide();
+            }
+        });
+    });
+</script>
